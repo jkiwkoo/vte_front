@@ -29,7 +29,7 @@ const Home = () => {
             height={235}
           />
           <div
-            className={`text-[46px] flex flex-col items-center justify-center text-center font-gmarketBold leading-[56px]`}
+            className={`text-[46px] flex flex-col items-center justify-center text-center font-gmarketBold leading-[56px] text-black`}
           >
             <div>Website</div>
             <div>Under</div>
@@ -45,7 +45,7 @@ const Home = () => {
             window.open('https://pf.kakao.com/_yxjsAG/chat');
           }}
         >
-          <div className="pt-1 font-gmarketBold">CONTACT</div>
+          <div className="pt-1 font-gmarketBold text-white">CONTACT</div>
           <Image
             className="absolute ml-[260px] mt-[20px]"
             src="/images/Mouse.png"

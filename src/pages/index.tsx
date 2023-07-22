@@ -13,7 +13,7 @@ const Home = () => {
       </Head>
       <Header />
       <div className="flex flex-col items-center">
-        <div className="mt-[181px] w-[446px] h-[235px] flex items-center justify-center">
+        <div className="mt-[231px] w-[446px] h-[235px] flex items-center justify-center">
           <Image
             className="absolute ml-[433px] mb-[222px]"
             src="/images/MainBannerTail.png"

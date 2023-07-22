@@ -3,22 +3,22 @@ export const VTELogo: React.FC<React.SVGAttributes<SVGSVGElement>> = (
 ) => {
   return (
     <svg
-      width="123"
-      height="35"
-      viewBox="0 0 123 35"
+      width="88"
+      height="25"
+      viewBox="0 0 88 25"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <g clipPath="url(#clip0_304_4)">
+      <g clip-path="url(#clip0_304_4)">
         <path
-          d="M122.949 8.96407V0H86.509H81.6692H52.4824H40.0527H36.9925L26.2345 24.2966L15.4764 0H0L18.0514 35H34.4041L46.7529 11.0914H56.4054V35H70.1563V11.0914H81.6692V35H122.949V26.0092H95.4201V21.5405H122.949V13.4327H95.4201V8.96407H122.949Z"
+          d="M88 6.4029V0H61.9184H58.4544H37.564H28.6675H26.4772L18.7772 17.3547L11.0772 0H0L12.9202 25H24.6246L33.4632 7.9224H40.3719V25H50.214V7.9224H58.4544V25H88V18.578H68.2965V15.3861H88V9.5948H68.2965V6.4029H88Z"
           fill="black"
         />
       </g>
       <defs>
         <clipPath id="clip0_304_4">
-          <rect width="122.949" height="35" fill="white" />
+          <rect width="88" height="25" fill="white" />
         </clipPath>
       </defs>
     </svg>

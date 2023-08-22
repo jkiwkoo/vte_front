@@ -9,7 +9,8 @@ module.exports = {
     extend: {
       colors: {
         'default': '#F1F1F3',
-        'vte-gray': '#505050'
+        'vte-gray': '#505050',
+        'vte-violet': '#18082C'
       }
     },
     fontFamily: {

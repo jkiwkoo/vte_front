@@ -3,22 +3,26 @@ export const VTELogo: React.FC<React.SVGAttributes<SVGSVGElement>> = (
 ) => {
   return (
     <svg
-      width="88"
-      height="25"
-      viewBox="0 0 88 25"
+      width="98"
+      height="28"
+      viewBox="0 0 98 28"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <g clip-path="url(#clip0_304_4)">
+      <g
+        id="_&#235;&#160;&#136;&#236;&#157;&#180;&#236;&#150;&#180;_1"
+        clipPath="url(#clip0_352_110)"
+      >
         <path
-          d="M88 6.4029V0H61.9184H58.4544H37.564H28.6675H26.4772L18.7772 17.3547L11.0772 0H0L12.9202 25H24.6246L33.4632 7.9224H40.3719V25H50.214V7.9224H58.4544V25H88V18.578H68.2965V15.3861H88V9.5948H68.2965V6.4029H88Z"
-          fill="black"
+          id="Vector"
+          d="M98 7.17125V0H68.9546H65.0969H41.8327H31.9252H29.486L20.911 19.4373L12.336 0H0L14.3884 28H27.4228L37.2658 8.87309H44.9597V28H55.9202V8.87309H65.0969V28H98V20.8073H76.0575V17.2324H98V10.7462H76.0575V7.17125H98Z"
+          fill="white"
         />
       </g>
       <defs>
-        <clipPath id="clip0_304_4">
-          <rect width="88" height="25" fill="white" />
+        <clipPath id="clip0_352_110">
+          <rect width="98" height="28" fill="white" />
         </clipPath>
       </defs>
     </svg>

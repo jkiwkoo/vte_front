@@ -47,7 +47,7 @@ export const Screen = ({ isFocus, dispatch }: ScreenProps) => {
   };
 
   return (
-    <div className="h-[980px] bg-vte-blue-1 flex">
+    <div className="h-[980px] bg-vte-blue flex">
       {isFocus === 1 ? (
         <FocusedScreen screen={1} />
       ) : (

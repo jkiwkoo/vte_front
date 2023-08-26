@@ -34,6 +34,26 @@ const GmarketBoldFonts = localFont({
   variable: '--font-gmarketBold',
 });
 
+const NotoSansRegularFonts = localFont({
+  src: [
+    {
+      path: '../../public/fonts/NotoSansRegular.ttf',
+      weight: '400',
+    },
+  ],
+  variable: '--font-notoSans',
+});
+
+const NotoSansBoldFonts = localFont({
+  src: [
+    {
+      path: '../../public/fonts/NotoSansBold.ttf',
+      weight: '700',
+    },
+  ],
+  variable: '--font-notoSansBold',
+});
+
 const App = ({ Component, pageProps }: AppProps) => {
   return (
     <>
@@ -44,7 +64,7 @@ const App = ({ Component, pageProps }: AppProps) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div
-        className={`${GmarketFonts.variable} ${GmarketBoldFonts.variable} ${Applefonts.variable} font-gmarket`}
+        className={`${GmarketFonts.variable} ${GmarketBoldFonts.variable} ${Applefonts.variable} ${NotoSansRegularFonts.variable} ${NotoSansBoldFonts.variable} font-gmarket`}
       >
         <Component {...pageProps} />
       </div>

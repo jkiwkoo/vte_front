@@ -3,6 +3,7 @@ import 'i18n';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import localFont from '@next/font/local';
+import { Contact } from '@/components/Contact';
 
 const Applefonts = localFont({
   src: [
@@ -68,6 +69,7 @@ const App = ({ Component, pageProps }: AppProps) => {
       >
         <Component {...pageProps} />
       </div>
+      <Contact />
     </>
   );
 };

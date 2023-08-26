@@ -11,6 +11,7 @@ module.exports = {
         'default': '#F1F1F3',
         'vte-gray': '#505050',
         'vte-violet': '#18082C',
+        'vte-light-blue': '#8EA3DA',
         'vte-blue-1': '#432E9A',
         'vte-blue-2': '#3A248F',
         'vte-blue-3': '#321E82',

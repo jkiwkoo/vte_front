@@ -3,11 +3,19 @@ import { useTranslation } from 'react-i18next';
 import { VTELogo } from '@/assets/VTELogo';
 import { Flag } from '@/components/Flag';
 
-export const Header = () => {
+type HeaderProps = {
+  isBlack: boolean;
+};
+
+export const Header = ({ isBlack }: HeaderProps) => {
   const { t } = useTranslation();
 
   return (
-    <div className="h-[100px] flex items-center justify-between border border-transparent border-b-black bg-vte-violet">
+    <div
+      className={`h-[100px] flex items-center justify-between border border-transparent border-b-black ${
+        isBlack ? 'bg-black' : 'bg-vte-violet'
+      }`}
+    >
       <VTELogo className="ml-[18.75vw] hover:cursor-pointer" />
       <div className="flex items-center">
         <div className="flex h-[100px] pt-[50px] mr-[14vw] gap-[3.7vw] text-[18px] font-apple text-white">

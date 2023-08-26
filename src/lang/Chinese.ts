@@ -4,8 +4,8 @@ const Chinese = {
   },
   word: {
     company: 'COMPANY',
-    product: 'PRODUCT',
-    contact: 'CONTACT',
+    products: 'PRODUCTS',
+    support: 'SUPPORT',
   },
   glass: {
     '1': {

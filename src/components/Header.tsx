@@ -2,6 +2,7 @@ import i18next from 'i18next';
 import { useTranslation } from 'react-i18next';
 import { VTELogo } from '@/assets/VTELogo';
 import { Flag } from '@/components/Flag';
+import { useRouter } from 'next/router';
 
 type HeaderProps = {
   isBlack: boolean;
@@ -9,6 +10,7 @@ type HeaderProps = {
 
 export const Header = ({ isBlack }: HeaderProps) => {
   const { t } = useTranslation();
+  const router = useRouter();
 
   return (
     <div
@@ -16,12 +18,38 @@ export const Header = ({ isBlack }: HeaderProps) => {
         isBlack ? 'bg-black' : 'bg-vte-violet'
       }`}
     >
-      <VTELogo className="ml-[18.75vw] hover:cursor-pointer" />
+      <VTELogo
+        className="ml-[18.75vw] hover:cursor-pointer"
+        onClick={() => {
+          router.push('/');
+        }}
+      />
       <div className="flex items-center">
         <div className="flex h-[100px] pt-[50px] mr-[14vw] gap-[3.7vw] text-[18px] font-apple text-white">
-          <div className="hover:cursor-pointer">{t('word.company')}</div>
-          <div className="hover:cursor-pointer">{t('word.product')}</div>
-          <div className="hover:cursor-pointer">{t('word.contact')}</div>
+          <div
+            className="hover:cursor-pointer"
+            onClick={() => {
+              router.push('/company');
+            }}
+          >
+            {t('word.company')}
+          </div>
+          <div
+            className="hover:cursor-pointer"
+            onClick={() => {
+              router.push('/products');
+            }}
+          >
+            {t('word.products')}
+          </div>
+          <div
+            className="hover:cursor-pointer"
+            onClick={() => {
+              router.push('/support');
+            }}
+          >
+            {t('word.support')}
+          </div>
         </div>
         <div className="h-[100px] pt-[40px] mr-[3.2vw]">
           <div className="h-[30px] w-[30px] rounded-full bg-white border border-white overflow-hidden flex items-center justify-center hover:cursor-pointer">

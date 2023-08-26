@@ -15,6 +15,6 @@ export const Flag = ({ lang }: FlagProps) => {
     case 'cn':
       return <China className="h-[28px] w-[28px]" />;
     default:
-      return <Korea className="h-[28px] w-[28px]" />;
+      return <USA className="h-[28px] w-[28px]" />;
   }
 };

@@ -7,6 +7,16 @@ const Korean = {
     products: 'PRODUCTS',
     support: 'SUPPORT',
     download: 'download',
+    profile: 'Profile',
+    name: 'Name',
+    phone: 'Phone',
+    email: 'Email',
+    inquiry: 'Inquriy',
+    subject: 'Subject',
+    message: 'Message',
+    receipt: 'Receipt',
+    cancellation: 'Cancellation',
+    directInput: 'Direct input',
   },
   glass: {
     '1': {
@@ -121,6 +131,10 @@ const Korean = {
       '1': 'Customer Support',
       '2': 'Contact Us',
     },
+  },
+  mail: {
+    success: 'Message sent successfully!',
+    fail: 'Message sending failed...',
   },
 };
 

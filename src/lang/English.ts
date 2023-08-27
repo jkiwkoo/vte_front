@@ -7,6 +7,15 @@ const English = {
     products: 'PRODUCTS',
     support: 'SUPPORT',
     download: 'download',
+    name: 'Name',
+    phone: 'Phone',
+    email: 'Email',
+    inquiry: 'Inquriy',
+    subject: 'Subject',
+    message: 'Message',
+    receipt: 'Receipt',
+    cancellation: 'Cancellation',
+    directInput: 'Direct input',
   },
   glass: {
     '1': {
@@ -121,6 +130,10 @@ const English = {
       '1': 'Customer Support',
       '2': 'Contact Us',
     },
+  },
+  mail: {
+    success: 'Message sent successfully!',
+    fail: 'Message sending failed...',
   },
 };
 

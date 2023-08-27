@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next';
+import { Line } from '@/components/Line';
 
 export const CustomerSupport = () => {
   const { t } = useTranslation();
@@ -7,10 +8,6 @@ export const CustomerSupport = () => {
     method: string;
     title: string;
     url: string;
-  };
-
-  type LineProps = {
-    end?: boolean;
   };
 
   const SupportDetail = ({ method, title, url }: SupportDetailProps) => {
@@ -30,29 +27,19 @@ export const CustomerSupport = () => {
             {t('word.download')}
           </a>
         </div>
-        <Line />
+        <Line virtualWidth="62.5" />
       </>
-    );
-  };
-
-  const Line = ({ end }: LineProps) => {
-    return (
-      <div
-        className={`w-[62.5vw] border border-transparent ${
-          end ? 'border-t-white' : 'border-b-white'
-        }`}
-      ></div>
     );
   };
 
   return (
     <div className="w-[62.5vw] h-[100vh]">
-      <Line />
-      <Line end />
+      <Line virtualWidth="62.5" />
+      <Line virtualWidth="62.5" end />
       <SupportDetail method="자료" title="FOO" url="" />
       <SupportDetail method="견적" title="BAR" url="" />
       <SupportDetail method="견적" title="BAZ" url="" />
-      <Line end />
+      <Line virtualWidth="62.5" end />
     </div>
   );
 };

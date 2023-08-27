@@ -1,43 +1,56 @@
 import { CompanyBar } from '@/components/CompanyBar';
 import { Header } from '@/components/Header';
+import { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 const Company = () => {
   const { t } = useTranslation();
 
-  type TextProps = {
+  type AnimatedTextProps = {
     text: string;
+    isSmall?: boolean;
+    isGray?: boolean;
     noMargin?: boolean;
   };
 
-  const TextWhite = ({ text, noMargin }: TextProps) => {
-    return (
-      <div
-        className={`text-[20px] ${!noMargin ? 'mb-[20px]' : null} font-apple`}
-      >
-        {text}
-      </div>
-    );
-  };
+  const AnimatedText = ({
+    text,
+    noMargin,
+    isSmall,
+    isGray,
+  }: AnimatedTextProps) => {
+    const ref = useRef<HTMLDivElement | null>(null);
+    const [visible, setVisible] = useState(false);
 
-  const TextGray = ({ text, noMargin }: TextProps) => {
-    return (
-      <div
-        className={`text-[18px] text-vte-gray-3 ${
-          !noMargin ? 'mb-[20px]' : null
-        } font-apple`}
-      >
-        {text}
-      </div>
-    );
-  };
+    useEffect(() => {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach(({ target, isIntersecting }) => {
+            target === ref.current ? setVisible(isIntersecting) : null;
+          });
+        },
+        {
+          threshold: 0.5,
+        },
+      );
 
-  const TextGraySmall = ({ text, noMargin }: TextProps) => {
+      if (ref.current) {
+        observer.observe(ref.current);
+      }
+
+      return () => {
+        observer.disconnect();
+      };
+    }, []);
+
     return (
       <div
-        className={`text-[16px] text-vte-gray-3 ${
-          !noMargin ? 'mb-[20px]' : null
-        } ml-[15px] font-apple`}
+        className={`${
+          visible ? 'opacity-100 animate-fade-in-down' : 'opacity-0'
+        } ${isSmall ? 'text-[16px]' : isGray ? 'text-[18px]' : 'text-[20px]'} ${
+          isGray ? 'text-vte-gray-3' : 'text-white'
+        } ${!noMargin ? 'mb-[20px]' : null}`}
+        ref={ref}
       >
         {text}
       </div>
@@ -52,60 +65,60 @@ const Company = () => {
           {t('company.title')}
         </div>
         <CompanyBar year="2012">
-          <TextGray text={t('company.2012.1')} noMargin={true} />
-          <TextGraySmall text={t('company.2012.2')} noMargin={true} />
-          <TextGraySmall text={t('company.2012.3')} />
-          <TextGray text={t('company.2012.4')} />
+          <AnimatedText isGray noMargin text={t('company.2012.1')} />
+          <AnimatedText isGray isSmall noMargin text={t('company.2012.2')} />
+          <AnimatedText isGray isSmall text={t('company.2012.3')} />
+          <AnimatedText isGray text={t('company.2012.4')} />
         </CompanyBar>
         <CompanyBar year="2013">
-          <TextGray text={t('company.2013.1')} />
-          <TextGray text={t('company.2013.2')} />
-          <TextGray text={t('company.2013.3')} />
-          <TextGray text={t('company.2013.4')} />
-          <TextGray text={t('company.2013.5')} />
+          <AnimatedText isGray text={t('company.2013.1')} />
+          <AnimatedText isGray text={t('company.2013.2')} />
+          <AnimatedText isGray text={t('company.2013.3')} />
+          <AnimatedText isGray text={t('company.2013.4')} />
+          <AnimatedText isGray text={t('company.2013.5')} />
         </CompanyBar>
         <CompanyBar year="2014">
-          <TextGray text={t('company.2014.1')} />
+          <AnimatedText isGray text={t('company.2014.1')} />
         </CompanyBar>
         <CompanyBar year="2015">
-          <TextGray text={t('company.2015.1')} noMargin={true} />
-          <TextGraySmall text={t('company.2015.2')} />
+          <AnimatedText isGray noMargin text={t('company.2015.1')} />
+          <AnimatedText isGray isSmall text={t('company.2015.2')} />
         </CompanyBar>
         <CompanyBar year="2017">
-          <TextWhite text={t('company.2017.1')} noMargin={true} />
-          <TextWhite text={t('company.2017.2')} />
-          <TextWhite text={t('company.2017.3')} noMargin={true} />
-          <TextWhite text={t('company.2017.4')} />
+          <AnimatedText noMargin text={t('company.2017.1')} />
+          <AnimatedText text={t('company.2017.2')} />
+          <AnimatedText noMargin text={t('company.2017.3')} />
+          <AnimatedText text={t('company.2017.4')} />
         </CompanyBar>
         <CompanyBar year="2018">
-          <TextGray text={t('company.2018.1')} />
-          <TextGray text={t('company.2018.2')} />
-          <TextGray text={t('company.2018.3')} />
+          <AnimatedText isGray text={t('company.2018.1')} />
+          <AnimatedText isGray text={t('company.2018.2')} />
+          <AnimatedText isGray text={t('company.2018.3')} />
         </CompanyBar>
         <CompanyBar year="2019">
-          <TextGray text={t('company.2019.1')} />
-          <TextWhite text={t('company.2019.2')} noMargin={true} />
-          <TextWhite text={t('company.2019.3')} />
-          <TextGray text={t('company.2019.4')} />
-          <TextWhite text={t('company.2019.5')} />
+          <AnimatedText isGray text={t('company.2019.1')} />
+          <AnimatedText noMargin text={t('company.2019.2')} />
+          <AnimatedText text={t('company.2019.3')} />
+          <AnimatedText isGray text={t('company.2019.4')} />
+          <AnimatedText text={t('company.2019.5')} />
         </CompanyBar>
         <CompanyBar year="2020">
-          <TextGray text={t('company.2020.1')} />
-          <TextGray text={t('company.2020.2')} />
-          <TextGray text={t('company.2020.3')} />
+          <AnimatedText isGray text={t('company.2020.1')} />
+          <AnimatedText isGray text={t('company.2020.2')} />
+          <AnimatedText isGray text={t('company.2020.3')} />
         </CompanyBar>
         <CompanyBar year="2021">
-          <TextGray text={t('company.2021.1')} />
-          <TextGray text={t('company.2021.2')} />
-          <TextGray text={t('company.2021.3')} />
-          <TextWhite text={t('company.2021.4')} />
+          <AnimatedText isGray text={t('company.2021.1')} />
+          <AnimatedText isGray text={t('company.2021.2')} />
+          <AnimatedText isGray text={t('company.2021.3')} />
+          <AnimatedText text={t('company.2021.4')} />
         </CompanyBar>
         <CompanyBar year="2023" end={true}>
-          <TextWhite text={t('company.2023.1')} />
-          <TextWhite text={t('company.2023.2')} />
-          <TextWhite text={t('company.2023.3')} />
-          <TextWhite text={t('company.2023.4')} />
-          <TextWhite text={t('company.2023.5')} />
+          <AnimatedText text={t('company.2023.1')} />
+          <AnimatedText text={t('company.2023.2')} />
+          <AnimatedText text={t('company.2023.3')} />
+          <AnimatedText text={t('company.2023.4')} />
+          <AnimatedText text={t('company.2023.5')} />
         </CompanyBar>
       </div>
     </>

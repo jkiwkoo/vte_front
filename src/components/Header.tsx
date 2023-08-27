@@ -33,7 +33,9 @@ export const Header = ({ isBlack }: HeaderProps) => {
           <div>
             <div
               className={`hover:cursor-pointer ${
-                isBlack && router.asPath === '/company' ? 'text-white' : null
+                isBlack && router.asPath === '/company'
+                  ? 'text-white'
+                  : 'hover:text-white'
               }`}
               onClick={() => {
                 router.push('/company');
@@ -50,7 +52,9 @@ export const Header = ({ isBlack }: HeaderProps) => {
           <div>
             <div
               className={`hover:cursor-pointer ${
-                isBlack && router.asPath === '/products' ? 'text-white' : null
+                isBlack && router.asPath === '/products'
+                  ? 'text-white'
+                  : 'hover:text-white'
               }`}
               onClick={() => {
                 router.push('/products');
@@ -67,7 +71,9 @@ export const Header = ({ isBlack }: HeaderProps) => {
           <div>
             <div
               className={`hover:cursor-pointer ${
-                isBlack && router.asPath === '/support' ? 'text-white' : null
+                isBlack && router.asPath === '/support'
+                  ? 'text-white'
+                  : 'hover:text-white'
               }`}
               onClick={() => {
                 router.push('/support');

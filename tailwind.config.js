@@ -12,6 +12,8 @@ module.exports = {
         'vte-gray': '#505050',
         'vte-gray-2': '#808080',
         'vte-gray-3': '#A5A5A5',
+        'vte-gray-4': '#676767',
+        'vte-gray-5': '#3E3E3E',
         'vte-violet': '#18082C',
         'vte-light-blue': '#8EA3DA',
         'vte-blue': '#432E9A',

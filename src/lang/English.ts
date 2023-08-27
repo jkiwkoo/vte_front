@@ -6,6 +6,7 @@ const English = {
     company: 'COMPANY',
     products: 'PRODUCTS',
     support: 'SUPPORT',
+    download: 'download',
   },
   glass: {
     '1': {
@@ -104,6 +105,21 @@ const English = {
       '3': '• Develop vehicle sensor glass (in progress)',
       '4': '• Supply glass for FCBGA.',
       '5': '• Develop Composite Material and Specialty Glass.',
+    },
+  },
+  products: {
+    title: 'PRODUCTS',
+  },
+  support: {
+    title: 'SUPPORT',
+    description: {
+      '1': "We're here to help.",
+      '2': 'Check out our customer service contact information and product-specification below.',
+      '3': "If you can't find what you need, just fill out our contact form and a friendly representative will reach out soon.",
+    },
+    tab: {
+      '1': 'Customer Support',
+      '2': 'Contact Us',
     },
   },
 };

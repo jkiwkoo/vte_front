@@ -57,7 +57,12 @@ export const GlassScreen = ({ glass, isFocus }: GlassScreenProps) => {
         </div>
       ) : null}
       <div className="w-[100vw] h-[46.875vw] relative">
-        <Image src={`/images/GlassScreenImage${glass}.png`} alt="glass" fill />
+        <Image
+          src={`/images/GlassScreenImage${glass}.png`}
+          alt="glass"
+          fill
+          quality={100}
+        />
       </div>
     </div>
   );

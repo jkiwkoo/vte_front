@@ -15,7 +15,7 @@ const Products = () => {
         <div className="pt-[7.8125vw] mb-[107px] font-gmarketBold text-[40px] flex justify-center">
           {t('products.title')}
         </div>
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col items-center mb-[150px]">
           <div className="grid grid-flow-col justify-between items-center w-[41.615vw] text-[20px] font-apple">
             <div className="flex flex-col items-center">
               <div
@@ -151,6 +151,16 @@ const Products = () => {
                 )}
               </div>
             </div>
+          </div>
+        </div>
+        <div className="flex justify-end">
+          <div className="w-[77.344vw] h-[36.927vw] relative mr-[22.657vw]">
+            <Image
+              src="/images/ProductBg1.png"
+              alt="product"
+              fill
+              quality={100}
+            />
           </div>
         </div>
       </div>

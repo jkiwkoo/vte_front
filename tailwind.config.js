@@ -14,6 +14,7 @@ module.exports = {
         'vte-gray-3': '#A5A5A5',
         'vte-gray-4': '#676767',
         'vte-gray-5': '#3E3E3E',
+        'vte-gray-6': '#606060',
         'vte-violet': '#18082C',
         'vte-light-blue': '#8EA3DA',
         'vte-blue': '#432E9A',
@@ -24,19 +25,19 @@ module.exports = {
       },
       keyframes: {
         'fade-in-down': {
-            '0%': {
-                opacity: '0',
-                transform: 'translateY(-10px)'
-            },
-            '100%': {
-                opacity: '1',
-                transform: 'translateY(0)'
-            },
+          '0%': {
+            opacity: '0',
+            transform: 'translateY(-10px)'
+          },
+          '100%': {
+            opacity: '1',
+            transform: 'translateY(0)'
+          },
         }
       },
       animation: {
-          'fade-in-down': 'fade-in-down 0.5s ease-out'
-      }
+        'fade-in-down': 'fade-in-down 0.5s ease-out'
+      },
     },
     fontFamily: {
       gmarket: ['var(--font-gmarket)'],

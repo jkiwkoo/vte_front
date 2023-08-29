@@ -26,69 +26,63 @@ export const Header = ({ isBlack }: HeaderProps) => {
       />
       <div className="flex items-center">
         <div
-          className={`flex h-[100px] pt-[50px] mr-[14vw] gap-[3.7vw] text-[18px] font-apple ${
+          className={`flex h-[100px] pt-[39px] mr-[14vw] gap-[3.7vw] text-[18px] font-apple ${
             isBlack ? 'text-vte-gray-2' : 'text-white'
           } `}
         >
-          <div>
+          <div
+            className={`group hover:cursor-pointer h-min ${
+              isBlack && router.asPath === '/company'
+                ? 'text-white'
+                : 'hover:text-white'
+            }`}
+            onClick={() => {
+              router.push('/company');
+            }}
+          >
+            <div>{t('word.company')}</div>
             <div
-              className={`hover:cursor-pointer ${
-                isBlack && router.asPath === '/company'
-                  ? 'text-white'
-                  : 'hover:text-white'
-              }`}
-              onClick={() => {
-                router.push('/company');
-              }}
-            >
-              {t('word.company')}
-            </div>
-            <div
-              className={`${
+              className={`group-hover:border ${
                 isBlack && router.asPath === '/company' ? 'border' : null
               }`}
             ></div>
           </div>
-          <div>
+          <div
+            className={`group hover:cursor-pointer h-min ${
+              isBlack && router.asPath === '/products'
+                ? 'text-white'
+                : 'hover:text-white'
+            }`}
+            onClick={() => {
+              router.push('/products');
+            }}
+          >
+            <div>{t('word.products')}</div>
             <div
-              className={`hover:cursor-pointer ${
-                isBlack && router.asPath === '/products'
-                  ? 'text-white'
-                  : 'hover:text-white'
-              }`}
-              onClick={() => {
-                router.push('/products');
-              }}
-            >
-              {t('word.products')}
-            </div>
-            <div
-              className={`${
+              className={`group-hover:border h-min ${
                 isBlack && router.asPath === '/products' ? 'border' : null
               }`}
             ></div>
           </div>
-          <div>
+          <div
+            className={`group hover:cursor-pointer ${
+              isBlack && router.asPath === '/support'
+                ? 'text-white'
+                : 'hover:text-white'
+            }`}
+            onClick={() => {
+              router.push('/support');
+            }}
+          >
+            <div>{t('word.support')}</div>
             <div
-              className={`hover:cursor-pointer ${
-                isBlack && router.asPath === '/support'
-                  ? 'text-white'
-                  : 'hover:text-white'
-              }`}
-              onClick={() => {
-                router.push('/support');
-              }}
-            >
-              {t('word.support')}
-            </div>
-            <div
-              className={`${
+              className={`group-hover:border ${
                 isBlack && router.asPath === '/support' ? 'border' : null
               }`}
             ></div>
           </div>
         </div>
-        <div className="h-[100px] pt-[40px] mr-[3.2vw]">
+        <div className="h-[100px] flex items-center mr-[3.2vw]">
           <div className="h-[30px] w-[30px] rounded-full bg-white border border-white overflow-hidden flex items-center justify-center hover:cursor-pointer">
             <Flag lang={i18next.language} />
           </div>

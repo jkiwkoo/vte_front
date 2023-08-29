@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next';
+import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 
 type GlassScreenProps = {
@@ -9,10 +10,39 @@ type GlassScreenProps = {
 export const GlassScreen = ({ glass, isFocus }: GlassScreenProps) => {
   const { t } = useTranslation();
 
+  const ref = useRef<HTMLDivElement | null>(null);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(({ target, isIntersecting }) => {
+          target === ref.current ? setVisible(isIntersecting) : null;
+        });
+      },
+      {
+        threshold: 0.5,
+      },
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
   return (
     <div>
       {isFocus ? (
-        <div className="z-30 absolute w-[100vw] h-[46.875vw]">
+        <div
+          className={`z-30 absolute w-[100vw] h-[46.875vw] ${
+            visible ? 'opacity-100 animate-fade-in-down' : 'opacity-0'
+          }`}
+          ref={ref}
+        >
           <div className="flex gap-[11px] items-center">
             <div className="mt-[10vw] ml-[22.3vw] font-notoSansBold text-white text-[42px]">
               {t(`glass.${glass}.title`)}

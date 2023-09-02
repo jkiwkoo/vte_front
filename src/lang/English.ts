@@ -118,6 +118,33 @@ const English = {
   },
   products: {
     title: 'PRODUCTS',
+    '1': {
+      '1': 'LAF2 SCHOTT',
+      '2': 'FC5 HOYA',
+      '3': 'FD7 HOYA',
+      '4': 'FD8  HOYA',
+      '5': 'LAF2 SCHOTT',
+      '6': 'LAF2 SCHOTT',
+    },
+    '2': {
+      '1': 'TSP-M',
+      '2': 'OCA',
+      '3': 'Black Print',
+      '4': 'Glass',
+      '5': 'AF Coating',
+    },
+    '3': {
+      '1': 'TSP-M',
+      '2': 'OCA',
+      '3': 'Black Print',
+      '4': 'Glass',
+      '5': 'AF Coating',
+    },
+    '4': {
+      '1': 'Glass',
+      '2': 'Siver Coating',
+      '3': 'Glass',
+    },
   },
   support: {
     title: 'SUPPORT',

@@ -20,6 +20,8 @@ const Products = () => {
   const [catch8, setCatch8] = useState(false);
   const [catch9, setCatch9] = useState(false);
 
+  const [pageCatch, setPageCatch] = useState(false);
+
   const right880 = `absolute delay-75 transition-all duration-1000 ${
     catch9
       ? 'ml-[880px]'
@@ -269,191 +271,340 @@ const Products = () => {
         </div>
         <div className="flex flex-col items-center mb-[150px]">
           <div className="grid grid-flow-col justify-between items-center w-[41.615vw] text-[20px] font-apple">
-            <div className="flex flex-col items-center">
-              <div
-                className={`w-[120px] flex justify-center ${
-                  currentProduct === 1
-                    ? 'text-white'
-                    : 'text-vte-gray-6 hover:cursor-pointer hover:text-white'
-                }`}
-                onClick={() => {
-                  setCurrentProduct(1);
-                }}
-              >
-                {t('glass.1.title')}
+            <div
+              className="group"
+              onClick={() => {
+                setCurrentProduct(1);
+              }}
+            >
+              <div className="flex flex-col items-center">
+                <div
+                  className={`w-[120px] flex justify-center ${
+                    currentProduct === 1
+                      ? 'text-white'
+                      : 'text-vte-gray-6 hover:cursor-pointer group-hover:text-white'
+                  }`}
+                >
+                  {t('glass.1.title')}
+                </div>
+              </div>
+              <div className="w-[120px] flex justify-center">
+                <div className="w-[33px] h-[33px] flex items-center justify-center">
+                  {currentProduct === 1 ? (
+                    <Image
+                      src="/images/FocusedProduct.png"
+                      alt="dot"
+                      width={33}
+                      height={33}
+                    />
+                  ) : (
+                    <>
+                      <div className="absolute visible group-hover:invisible">
+                        <Image
+                          src="/images/UnFocusedProduct.png"
+                          alt="dot"
+                          width={13}
+                          height={13}
+                        />
+                      </div>
+                      <div className="absolute invisible group-hover:visible">
+                        <Image
+                          src="/images/FocusedProduct.png"
+                          alt="dot"
+                          width={33}
+                          height={33}
+                        />
+                      </div>
+                    </>
+                  )}
+                </div>
               </div>
             </div>
-            <div className="flex flex-col items-center">
-              <div
-                className={`w-[120px] flex justify-center ${
-                  currentProduct === 2
-                    ? 'text-white'
-                    : 'text-vte-gray-6 hover:cursor-pointer hover:text-white'
-                }`}
-                onClick={() => {
-                  setCurrentProduct(2);
-                }}
-              >
-                {t('glass.2.title')}
+            <div
+              className="group"
+              onClick={() => {
+                setCurrentProduct(2);
+              }}
+            >
+              <div className="flex flex-col items-center">
+                <div
+                  className={`w-[120px] flex justify-center ${
+                    currentProduct === 2
+                      ? 'text-white'
+                      : 'text-vte-gray-6 hover:cursor-pointer group-hover:text-white'
+                  }`}
+                >
+                  {t('glass.2.title')}
+                </div>
+              </div>
+              <div className="w-[120px] flex justify-center">
+                <div className="w-[33px] h-[33px] flex items-center justify-center">
+                  {currentProduct === 2 ? (
+                    <Image
+                      src="/images/FocusedProduct.png"
+                      alt="dot"
+                      width={33}
+                      height={33}
+                    />
+                  ) : (
+                    <>
+                      <div className="absolute visible group-hover:invisible">
+                        <Image
+                          src="/images/UnFocusedProduct.png"
+                          alt="dot"
+                          width={13}
+                          height={13}
+                        />
+                      </div>
+                      <div className="absolute invisible group-hover:visible">
+                        <Image
+                          src="/images/FocusedProduct.png"
+                          alt="dot"
+                          width={33}
+                          height={33}
+                        />
+                      </div>
+                    </>
+                  )}
+                </div>
               </div>
             </div>
-            <div className="flex flex-col items-center">
-              <div
-                className={`w-[120px] flex justify-center ${
-                  currentProduct === 3
-                    ? 'text-white'
-                    : 'text-vte-gray-6 hover:cursor-pointer hover:text-white'
-                }`}
-                onClick={() => {
-                  setCurrentProduct(3);
-                }}
-              >
-                {t('glass.3.title')}
+            <div
+              className="group"
+              onClick={() => {
+                setCurrentProduct(3);
+              }}
+            >
+              <div className="flex flex-col items-center">
+                <div
+                  className={`w-[120px] flex justify-center ${
+                    currentProduct === 3
+                      ? 'text-white'
+                      : 'text-vte-gray-6 hover:cursor-pointer group-hover:text-white'
+                  }`}
+                >
+                  {t('glass.3.title')}
+                </div>
+              </div>
+              <div className="w-[120px] flex justify-center">
+                <div className="w-[33px] h-[33px] flex items-center justify-center">
+                  {currentProduct === 3 ? (
+                    <Image
+                      src="/images/FocusedProduct.png"
+                      alt="dot"
+                      width={33}
+                      height={33}
+                    />
+                  ) : (
+                    <>
+                      <div className="absolute visible group-hover:invisible">
+                        <Image
+                          src="/images/UnFocusedProduct.png"
+                          alt="dot"
+                          width={13}
+                          height={13}
+                        />
+                      </div>
+                      <div className="absolute invisible group-hover:visible">
+                        <Image
+                          src="/images/FocusedProduct.png"
+                          alt="dot"
+                          width={33}
+                          height={33}
+                        />
+                      </div>
+                    </>
+                  )}
+                </div>
               </div>
             </div>
-            <div className="flex flex-col items-center">
-              <div
-                className={`w-[120px] flex justify-center ${
-                  currentProduct === 4
-                    ? 'text-white'
-                    : 'text-vte-gray-6 hover:cursor-pointer hover:text-white'
-                }`}
-                onClick={() => {
-                  setCurrentProduct(4);
-                }}
-              >
-                {t('glass.4.title')}
+            <div
+              className="group"
+              onClick={() => {
+                setCurrentProduct(4);
+              }}
+            >
+              <div className="flex flex-col items-center">
+                <div
+                  className={`w-[120px] flex justify-center ${
+                    currentProduct === 4
+                      ? 'text-white'
+                      : 'text-vte-gray-6 hover:cursor-pointer group-hover:text-white'
+                  }`}
+                >
+                  {t('glass.4.title')}
+                </div>
               </div>
-            </div>
-          </div>
-          <div className="grid grid-flow-col justify-between items-center w-[41.615vw]">
-            <div className="w-[120px] flex justify-center">
-              <div className="w-[33px] h-[33[px] flex items-center justify-center">
-                {currentProduct === 1 ? (
-                  <Image
-                    src="/images/FocusedProduct.png"
-                    alt="dot"
-                    width={33}
-                    height={33}
-                  />
-                ) : (
-                  <Image
-                    src="/images/UnFocusedProduct.png"
-                    alt="dot"
-                    width={13}
-                    height={13}
-                  />
-                )}
-              </div>
-            </div>
-            <div className="w-[120px] flex justify-center">
-              <div className="w-[33px] h-[33[px] flex items-center justify-center">
-                {currentProduct === 2 ? (
-                  <Image
-                    src="/images/FocusedProduct.png"
-                    alt="dot"
-                    width={33}
-                    height={33}
-                  />
-                ) : (
-                  <Image
-                    src="/images/UnFocusedProduct.png"
-                    alt="dot"
-                    width={13}
-                    height={13}
-                  />
-                )}
-              </div>
-            </div>
-            <div className="w-[120px] flex justify-center">
-              <div className="w-[33px] h-[33[px] flex items-center justify-center">
-                {currentProduct === 3 ? (
-                  <Image
-                    src="/images/FocusedProduct.png"
-                    alt="dot"
-                    width={33}
-                    height={33}
-                  />
-                ) : (
-                  <Image
-                    src="/images/UnFocusedProduct.png"
-                    alt="dot"
-                    width={13}
-                    height={13}
-                  />
-                )}
-              </div>
-            </div>
-            <div className="w-[120px] flex justify-center">
-              <div className="w-[33px] h-[33[px] flex items-center justify-center">
-                {currentProduct === 4 ? (
-                  <Image
-                    src="/images/FocusedProduct.png"
-                    alt="dot"
-                    width={33}
-                    height={33}
-                  />
-                ) : (
-                  <Image
-                    src="/images/UnFocusedProduct.png"
-                    alt="dot"
-                    width={13}
-                    height={13}
-                  />
-                )}
+              <div className="w-[120px] flex justify-center">
+                <div className="w-[33px] h-[33px] flex items-center justify-center">
+                  {currentProduct === 4 ? (
+                    <Image
+                      src="/images/FocusedProduct.png"
+                      alt="dot"
+                      width={33}
+                      height={33}
+                    />
+                  ) : (
+                    <>
+                      <div className="absolute visible group-hover:invisible">
+                        <Image
+                          src="/images/UnFocusedProduct.png"
+                          alt="dot"
+                          width={13}
+                          height={13}
+                        />
+                      </div>
+                      <div className="absolute invisible group-hover:visible">
+                        <Image
+                          src="/images/FocusedProduct.png"
+                          alt="dot"
+                          width={33}
+                          height={33}
+                        />
+                      </div>
+                    </>
+                  )}
+                </div>
               </div>
             </div>
           </div>
         </div>
+        <div className="flex justify-center w-full h-10 absolute mt-[20vw] items-center">
+          <Observer dispatch={setPageCatch} />
+        </div>
         {currentProduct === 1 ? (
-          <div className="w-[77.344vw] h-[36.927vw] relative mr-[22.657vw] animate-fade-in-left">
-            <Image
-              src="/images/ProductBg1.png"
-              alt="product"
-              fill
-              quality={100}
-            />
-          </div>
-        ) : null}
-        {currentProduct === 2 ? (
-          <div className="w-[32.4vw] h-[49vw] relative ml-[13.6vw] animate-fade-in-left">
-            <Image
-              src="/images/ProductBg2.png"
-              alt="product"
-              fill
-              quality={100}
-            />
-            <div className="pt-[24vw]">
-              <div className="w-[32.4vw] h-[25vw] relative">
-                <Image
-                  src="/images/ProductBg2Sub.png"
-                  alt="productSub"
-                  fill
-                  quality={100}
-                />
+          <>
+            <div
+              className={`w-[25.42vw] h-[7.5vw] z-10 absolute mt-[3.23vw] ml-[33.125vw] ${
+                pageCatch ? 'transition-all animate-fade-in-down2' : 'hidden'
+              } `}
+            >
+              <Image src="/images/Product1Line.png" alt="product" fill />
+            </div>
+            <div
+              className={`w-[10vw] h-[8.91vw] z-10 absolute mt-[7.45vw] ml-[57.5vw] ${
+                pageCatch ? 'transition-all animate-fade-in-down2' : 'hidden'
+              } `}
+            >
+              <Image src="/images/Product1.png" alt="product" fill />
+              <div className="mt-[8.91vw] ml-[5vw] font-apple text-white w-[500px]">
+                <div className="text-[18px]">{t('glass.1.title')}</div>
+                <div className="text-[42px]">{t('glass.1.subTitle')}</div>
+                <div className="text-[20px]">{t('glass.1.description')}</div>
               </div>
             </div>
-          </div>
+            <div className="w-[77.344vw] h-[36.927vw] relative mr-[22.657vw] animate-fade-in-left">
+              <Image
+                src="/images/ProductBg1.png"
+                alt="product"
+                fill
+                quality={100}
+              />
+            </div>
+          </>
+        ) : null}
+        {currentProduct === 2 ? (
+          <>
+            <div
+              className={`w-[9.115vw] h-[6.667vw] z-10 absolute mt-[10.52vw] ml-[43.9vw] ${
+                pageCatch ? 'transition-all animate-fade-in-down2' : 'hidden'
+              } `}
+            >
+              <Image src="/images/Product2Line.png" alt="product" fill />
+            </div>
+            <div
+              className={`w-[10.1vw] h-[22.97vw] z-10 absolute mt-[3vw] ml-[52.6vw] ${
+                pageCatch ? 'transition-all animate-fade-in-down2' : 'hidden'
+              } `}
+            >
+              <Image src="/images/Product2.png" alt="product" fill />
+              <div className="mt-[24vw] ml-[2vw] font-apple text-white w-[500px]">
+                <div className="text-[18px]">{t('glass.2.title')}</div>
+                <div className="text-[42px]">{t('glass.2.subTitle')}</div>
+                <div className="text-[20px]">{t('glass.2.description')}</div>
+              </div>
+            </div>
+            <div className="w-[32.4vw] h-[49vw] relative ml-[13.6vw] animate-fade-in-left">
+              <Image
+                src="/images/ProductBg2.png"
+                alt="product"
+                fill
+                quality={100}
+              />
+              <div className="pt-[24vw]">
+                <div className="w-[32.4vw] h-[25vw] relative">
+                  <Image
+                    src="/images/ProductBg2Sub.png"
+                    alt="productSub"
+                    fill
+                    quality={100}
+                  />
+                </div>
+              </div>
+            </div>
+          </>
         ) : null}
         {currentProduct === 3 ? (
-          <div className="w-[77.92vw] h-[40.83vw] relative ml-[14.1vw] animate-fade-in-left">
-            <Image
-              src="/images/ProductBg3.png"
-              alt="product"
-              fill
-              quality={100}
-            />
-          </div>
+          <>
+            <div
+              className={`w-[24.947vw] h-[12.03vw] z-10 absolute mt-[25.52vw] ml-[24.22vw] ${
+                pageCatch ? 'transition-all animate-fade-in-down2' : 'hidden'
+              } `}
+            >
+              <Image src="/images/Product3.png" alt="product" fill />
+              <div className="mt-[13vw] ml-[2vw] font-apple text-white w-[500px]">
+                <div className="text-[18px]">{t('glass.3.title')}</div>
+                <div className="text-[42px]">{t('glass.3.subTitle')}</div>
+                <div className="text-[20px]">{t('glass.3.description')}</div>
+              </div>
+            </div>
+            <div
+              className={`w-[19.53vw] h-[10.364vw] z-10 absolute mt-[18.4375vw] ml-[47.395vw] ${
+                pageCatch ? 'transition-all animate-fade-in-down2' : 'hidden'
+              } `}
+            >
+              <Image src="/images/Product3Line.png" alt="product" fill />
+            </div>
+            <div className="w-[77.92vw] h-[40.83vw] relative ml-[14.1vw] animate-fade-in-left">
+              <Image
+                src="/images/ProductBg3.png"
+                alt="product"
+                fill
+                quality={100}
+              />
+            </div>
+          </>
         ) : null}
         {currentProduct === 4 ? (
-          <div className="w-[63.9vw] h-[42.66vw] relative ml-[12.6vw] animate-fade-in-left">
-            <Image
-              src="/images/ProductBg4.png"
-              alt="product"
-              fill
-              quality={100}
-            />
-          </div>
+          <>
+            <div
+              className={`w-[13.8vw] h-[19.792vw] z-10 absolute mt-[7.45vw] ml-[51.82vw] ${
+                pageCatch ? 'transition-all animate-fade-in-down2' : 'hidden'
+              } `}
+            >
+              <Image src="/images/Product4.png" alt="product" fill />
+              <div className="mt-[20vw] ml-[5vw] font-apple text-white w-[500px]">
+                <div className="text-[18px]">{t('glass.4.title')}</div>
+                <div className="text-[42px]">{t('glass.4.subTitle')}</div>
+                <div className="text-[20px]">{t('glass.4.description')}</div>
+              </div>
+            </div>
+            <div
+              className={`w-[20.677vw] h-[8.125vw] z-10 absolute mt-[9.843vw] ml-[35vw] ${
+                pageCatch ? 'transition-all animate-fade-in-down2' : 'hidden'
+              } `}
+            >
+              <Image src="/images/Product4Line.png" alt="product" fill />
+            </div>
+            <div className="w-[63.9vw] h-[42.66vw] relative ml-[12.6vw] animate-fade-in-left">
+              <Image
+                src="/images/ProductBg4.png"
+                alt="product"
+                fill
+                quality={100}
+              />
+            </div>
+          </>
         ) : null}
         <div className="h-[1200px] flex justify-center items-center">
           <div className="flex flex-col items-center justify-between h-full w-full pt-[500px] pb-[200px]">

@@ -8,7 +8,13 @@ export const Contact = () => {
         window.open('https://pf.kakao.com/_yxjsAG/chat');
       }}
     >
-      <Image src={`/images/Contact.png`} alt="contact" width={73} height={72} />
+      <Image
+        src={`/images/Contact.png`}
+        alt="contact"
+        width={73}
+        height={72}
+        priority
+      />
     </div>
   );
 };

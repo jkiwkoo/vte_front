@@ -166,99 +166,99 @@ const Products = () => {
       : ''
   }`;
 
-  const bottom600 = `absolute delay-75 transition-all duration-1000 ${
+  const bottom400 = `absolute delay-75 transition-all duration-1000 ${
     catch9
-      ? 'mt-[600px]'
+      ? 'mt-[400px]'
       : catch8
-      ? 'mt-[540px]'
-      : catch7
-      ? 'mt-[480px]'
-      : catch6
-      ? 'mt-[420px]'
-      : catch5
       ? 'mt-[360px]'
-      : catch4
-      ? 'mt-[300px]'
-      : catch3
+      : catch7
+      ? 'mt-[320px]'
+      : catch6
+      ? 'mt-[280px]'
+      : catch5
       ? 'mt-[240px]'
+      : catch4
+      ? 'mt-[200px]'
+      : catch3
+      ? 'mt-[160px]'
       : catch2
-      ? 'mt-[180px]'
-      : catch1
       ? 'mt-[120px]'
+      : catch1
+      ? 'mt-[80px]'
       : catch0
-      ? 'mt-[60px]'
+      ? 'mt-[40px]'
       : ''
   }`;
 
-  const bottom300 = `absolute delay-75 transition-all duration-1000 ${
+  const bottom200 = `absolute delay-75 transition-all duration-1000 ${
     catch9
-      ? 'mt-[300px]'
+      ? 'mt-[200px]'
       : catch8
-      ? 'mt-[270px]'
-      : catch7
-      ? 'mt-[240px]'
-      : catch6
-      ? 'mt-[210px]'
-      : catch5
       ? 'mt-[180px]'
-      : catch4
-      ? 'mt-[150px]'
-      : catch3
+      : catch7
+      ? 'mt-[160px]'
+      : catch6
+      ? 'mt-[140px]'
+      : catch5
       ? 'mt-[120px]'
+      : catch4
+      ? 'mt-[100px]'
+      : catch3
+      ? 'mt-[80px]'
       : catch2
-      ? 'mt-[90px]'
-      : catch1
       ? 'mt-[60px]'
+      : catch1
+      ? 'mt-[40px]'
       : catch0
-      ? 'mt-[30px]'
+      ? 'mt-[20px]'
       : ''
   }`;
 
-  const top600 = `absolute delay-75 transition-all duration-1000 ${
+  const top400 = `absolute delay-75 transition-all duration-1000 ${
     catch9
-      ? 'mb-[600px]'
+      ? 'mb-[400px]'
       : catch8
-      ? 'mb-[540px]'
+      ? 'mb-[260px]'
       : catch7
-      ? 'mb-[480px]'
+      ? 'mb-[320px]'
       : catch6
-      ? 'mb-[420px]'
+      ? 'mb-[280px]'
       : catch5
-      ? 'mb-[360px]'
-      : catch4
-      ? 'mb-[300px]'
-      : catch3
       ? 'mb-[240px]'
+      : catch4
+      ? 'mb-[200px]'
+      : catch3
+      ? 'mb-[160px]'
       : catch2
-      ? 'mb-[180px]'
-      : catch1
       ? 'mb-[120px]'
+      : catch1
+      ? 'mb-[80px]'
       : catch0
-      ? 'mb-[60px]'
+      ? 'mb-[40px]'
       : ''
   }`;
 
-  const top300 = `absolute delay-75 transition-all duration-1000 ${
+  const top200 = `absolute delay-75 transition-all duration-1000 ${
     catch9
-      ? 'mb-[300px]'
+      ? 'mb-[200px]'
       : catch8
-      ? 'mb-[270px]'
-      : catch7
-      ? 'mb-[240px]'
-      : catch6
-      ? 'mb-[210px]'
-      : catch5
       ? 'mb-[180px]'
-      : catch4
-      ? 'mb-[150px]'
-      : catch3
+      : catch7
+      ? 'mb-[160px]'
+      : catch6
+      ? 'mb-[140px]'
+      : catch5
       ? 'mb-[120px]'
+      : catch4
+      ? 'mb-[100px]'
+      : catch3
+      ? 'mb-[80px]'
       : catch2
-      ? 'mb-[90px]'
-      : catch1
       ? 'mb-[60px]'
+      : catch1
+      ? 'mb-[40px]'
       : catch0
-      ? 'mb-[30px]'
+      ? 'mb-[20px]'
       : ''
   }`;
 
@@ -622,6 +622,24 @@ const Products = () => {
           {currentProduct === 1 ? (
             <>
               <div className={left130}>
+                <div
+                  className={`absolute translate-y-[267px] translate-x-[-78px] flex flex-col items-center w-[200px] ${
+                    catch8 ? 'transition-all animate-fade-in' : 'hidden'
+                  }`}
+                >
+                  <div>
+                    <Image
+                      className=""
+                      src="/images/Product1_3Line.png"
+                      alt="productLine"
+                      width={6}
+                      height={86}
+                    />
+                  </div>
+                  <div className="h-[30px] flex items-center">
+                    {t('products.1.3')}
+                  </div>
+                </div>
                 <Image
                   className="mr-[44px] z-10"
                   src="/images/Product1_3.png"
@@ -632,6 +650,24 @@ const Products = () => {
                 />
               </div>
               <div className={left480}>
+                <div
+                  className={`absolute translate-y-[267px] translate-x-[-60px] flex flex-col items-center w-[200px] ${
+                    catch8 ? 'transition-all animate-fade-in' : 'hidden'
+                  }`}
+                >
+                  <div>
+                    <Image
+                      className=""
+                      src="/images/Product1_2Line.png"
+                      alt="productLine"
+                      width={6}
+                      height={139}
+                    />
+                  </div>
+                  <div className="h-[30px] flex items-center">
+                    {t('products.1.2')}
+                  </div>
+                </div>
                 <Image
                   className="mr-[69px] z-20"
                   src="/images/Product1_2.png"
@@ -642,6 +678,24 @@ const Products = () => {
                 />
               </div>
               <div className={left880}>
+                <div
+                  className={`absolute translate-y-[323px] translate-x-[-70px] flex flex-col items-center w-[200px] ${
+                    catch8 ? 'transition-all animate-fade-in' : 'hidden'
+                  }`}
+                >
+                  <div>
+                    <Image
+                      className=""
+                      src="/images/Product1_1Line.png"
+                      alt="productLine"
+                      width={6}
+                      height={191}
+                    />
+                  </div>
+                  <div className="h-[30px] flex items-center">
+                    {t('products.1.1')}
+                  </div>
+                </div>
                 <Image
                   className="mr-[128px] z-30"
                   src="/images/Product1_1.png"
@@ -652,6 +706,24 @@ const Products = () => {
                 />
               </div>
               <div className={right130}>
+                <div
+                  className={`absolute translate-y-[-126px] translate-x-[-34px] flex flex-col items-center w-[200px] ${
+                    catch8 ? 'transition-all animate-fade-in' : 'hidden'
+                  }`}
+                >
+                  <div className="h-[30px] flex items-center">
+                    {t('products.1.4')}
+                  </div>
+                  <div>
+                    <Image
+                      className=""
+                      src="/images/Product1_4Line.png"
+                      alt="productLine"
+                      width={6}
+                      height={86}
+                    />
+                  </div>
+                </div>
                 <Image
                   className="ml-[44px] z-10"
                   src="/images/Product1_4.png"
@@ -662,6 +734,24 @@ const Products = () => {
                 />
               </div>
               <div className={right480}>
+                <div
+                  className={`absolute translate-y-[-179px] translate-x-[-1px] flex flex-col items-center w-[200px] ${
+                    catch8 ? 'transition-all animate-fade-in' : 'hidden'
+                  }`}
+                >
+                  <div className="h-[30px] flex items-center">
+                    {t('products.1.5')}
+                  </div>
+                  <div>
+                    <Image
+                      className=""
+                      src="/images/Product1_5Line.png"
+                      alt="productLine"
+                      width={6}
+                      height={139}
+                    />
+                  </div>
+                </div>
                 <Image
                   className="ml-[69px] z-20"
                   src="/images/Product1_5.png"
@@ -672,6 +762,24 @@ const Products = () => {
                 />
               </div>
               <div className={right880}>
+                <div
+                  className={`absolute translate-y-[-231px] translate-x-[58px] flex flex-col items-center w-[200px] ${
+                    catch8 ? 'transition-all animate-fade-in' : 'hidden'
+                  }`}
+                >
+                  <div className="h-[30px] flex items-center">
+                    {t('products.1.6')}
+                  </div>
+                  <div>
+                    <Image
+                      className=""
+                      src="/images/Product1_6Line.png"
+                      alt="productLine"
+                      width={6}
+                      height={191}
+                    />
+                  </div>
+                </div>
                 <Image
                   className="ml-[128px] z-30"
                   src="/images/Product1_6.png"
@@ -685,7 +793,25 @@ const Products = () => {
           ) : null}
           {currentProduct === 2 ? (
             <>
-              <div className={`${left880} ${top600}`}>
+              <div className={`${left880} ${top400}`}>
+                <div
+                  className={`absolute translate-y-[40px] translate-x-[252px] flex justify-between gap-[10px] ${
+                    catch8 ? 'transition-all animate-fade-in' : 'hidden'
+                  }`}
+                >
+                  <div className="h-[30px] flex items-center">
+                    <Image
+                      className=""
+                      src="/images/Product2LineRight.png"
+                      alt="productLine"
+                      width={191}
+                      height={6}
+                    />
+                  </div>
+                  <div className="h-[30px] flex items-center w-[300px] pt-[3px]">
+                    {t('products.2.1')}
+                  </div>
+                </div>
                 <Image
                   className="z-10"
                   src="/images/Product2_1.png"
@@ -696,7 +822,25 @@ const Products = () => {
                   priority
                 />
               </div>
-              <div className={`${left480} ${top300}`}>
+              <div className={`${left480} ${top200}`}>
+                <div
+                  className={`absolute translate-y-[40px] translate-x-[290px] flex justify-between gap-[10px] ${
+                    catch8 ? 'transition-all animate-fade-in' : 'hidden'
+                  }`}
+                >
+                  <div className="h-[30px] flex items-center">
+                    <Image
+                      className=""
+                      src="/images/Product2LineRight.png"
+                      alt="productLine"
+                      width={191}
+                      height={6}
+                    />
+                  </div>
+                  <div className="h-[30px] flex items-center w-[300px] pt-[3px]">
+                    {t('products.2.2')}
+                  </div>
+                </div>
                 <Image
                   className="z-20"
                   src="/images/Product2_2.png"
@@ -708,6 +852,24 @@ const Products = () => {
                 />
               </div>
               <div className="absolute">
+                <div
+                  className={`absolute translate-y-[40px] translate-x-[270px] flex justify-between gap-[10px] ${
+                    catch8 ? 'transition-all animate-fade-in' : 'hidden'
+                  }`}
+                >
+                  <div className="h-[30px] flex items-center">
+                    <Image
+                      className=""
+                      src="/images/Product2LineRight.png"
+                      alt="productLine"
+                      width={191}
+                      height={6}
+                    />
+                  </div>
+                  <div className="h-[30px] flex items-center w-[300px] pt-[3px]">
+                    {t('products.2.3')}
+                  </div>
+                </div>
                 <Image
                   className="z-30"
                   src="/images/Product2_3.png"
@@ -718,7 +880,25 @@ const Products = () => {
                   priority
                 />
               </div>
-              <div className={`${right480} ${bottom300}`}>
+              <div className={`${right480} ${bottom200}`}>
+                <div
+                  className={`absolute translate-y-[500px] translate-x-[-310px] flex justify-between gap-[10px] ${
+                    catch8 ? 'transition-all animate-fade-in' : 'hidden'
+                  }`}
+                >
+                  <div className="h-[30px] flex items-center justify-end w-[300px] pt-[3px]">
+                    {t('products.2.4')}
+                  </div>
+                  <div className="h-[30px] flex items-center">
+                    <Image
+                      className=""
+                      src="/images/Product2LineLeft.png"
+                      alt="productLine"
+                      width={191}
+                      height={6}
+                    />
+                  </div>
+                </div>
                 <Image
                   className="z-40"
                   src="/images/Product2_4.png"
@@ -729,7 +909,25 @@ const Products = () => {
                   priority
                 />
               </div>
-              <div className={`${right880} ${bottom600}`}>
+              <div className={`${right880} ${bottom400}`}>
+                <div
+                  className={`absolute translate-y-[500px] translate-x-[-300px] flex justify-between gap-[10px] ${
+                    catch8 ? 'transition-all animate-fade-in' : 'hidden'
+                  }`}
+                >
+                  <div className="h-[30px] flex items-center justify-end w-[300px] pt-[3px]">
+                    {t('products.2.5')}
+                  </div>
+                  <div className="h-[30px] flex items-center">
+                    <Image
+                      className=""
+                      src="/images/Product2LineLeft.png"
+                      alt="productLine"
+                      width={191}
+                      height={6}
+                    />
+                  </div>
+                </div>
                 <Image
                   className="z-50"
                   src="/images/Product2_5.png"
@@ -744,7 +942,25 @@ const Products = () => {
           ) : null}
           {currentProduct === 3 ? (
             <>
-              <div className={`${right880} ${top600}`}>
+              <div className={`${right880} ${top400}`}>
+                <div
+                  className={`absolute translate-y-[70px] translate-x-[-500px] flex justify-between gap-[10px] ${
+                    catch8 ? 'transition-all animate-fade-in' : 'hidden'
+                  }`}
+                >
+                  <div className="h-[30px] flex items-center justify-end w-[300px] pt-[3px]">
+                    {t('products.3.5')}
+                  </div>
+                  <div className="h-[30px] flex items-center">
+                    <Image
+                      className=""
+                      src="/images/Product2LineLeft.png"
+                      alt="productLine"
+                      width={191}
+                      height={6}
+                    />
+                  </div>
+                </div>
                 <Image
                   className="z-10"
                   src="/images/Product3_5.png"
@@ -755,7 +971,25 @@ const Products = () => {
                   priority
                 />
               </div>
-              <div className={`${right480} ${top300}`}>
+              <div className={`${right480} ${top200}`}>
+                <div
+                  className={`absolute translate-y-[70px] translate-x-[-500px] flex justify-between gap-[10px] ${
+                    catch8 ? 'transition-all animate-fade-in' : 'hidden'
+                  }`}
+                >
+                  <div className="h-[30px] flex items-center justify-end w-[300px] pt-[3px]">
+                    {t('products.3.4')}
+                  </div>
+                  <div className="h-[30px] flex items-center">
+                    <Image
+                      className=""
+                      src="/images/Product2LineLeft.png"
+                      alt="productLine"
+                      width={191}
+                      height={6}
+                    />
+                  </div>
+                </div>
                 <Image
                   className="z-20"
                   src="/images/Product3_4.png"
@@ -767,6 +1001,24 @@ const Products = () => {
                 />
               </div>
               <div className="absolute">
+                <div
+                  className={`absolute translate-y-[70px] translate-x-[-500px] flex justify-between gap-[10px] ${
+                    catch8 ? 'transition-all animate-fade-in' : 'hidden'
+                  }`}
+                >
+                  <div className="h-[30px] flex items-center justify-end w-[300px] pt-[3px]">
+                    {t('products.3.3')}
+                  </div>
+                  <div className="h-[30px] flex items-center">
+                    <Image
+                      className=""
+                      src="/images/Product2LineLeft.png"
+                      alt="productLine"
+                      width={191}
+                      height={6}
+                    />
+                  </div>
+                </div>
                 <Image
                   className="z-30"
                   src="/images/Product3_3.png"
@@ -777,7 +1029,25 @@ const Products = () => {
                   priority
                 />
               </div>
-              <div className={`${left480} ${bottom300}`}>
+              <div className={`${left480} ${bottom200}`}>
+                <div
+                  className={`absolute translate-y-[280px] translate-x-[770px] flex justify-between gap-[10px] ${
+                    catch8 ? 'transition-all animate-fade-in' : 'hidden'
+                  }`}
+                >
+                  <div className="h-[30px] flex items-center">
+                    <Image
+                      className=""
+                      src="/images/Product2LineRight.png"
+                      alt="productLine"
+                      width={191}
+                      height={6}
+                    />
+                  </div>
+                  <div className="h-[30px] flex items-center w-[300px] pt-[3px]">
+                    {t('products.3.2')}
+                  </div>
+                </div>
                 <Image
                   className="z-40"
                   src="/images/Product3_2.png"
@@ -788,7 +1058,25 @@ const Products = () => {
                   priority
                 />
               </div>
-              <div className={`${left880} ${bottom600}`}>
+              <div className={`${left880} ${bottom400}`}>
+                <div
+                  className={`absolute translate-y-[280px] translate-x-[770px] flex justify-between gap-[10px] ${
+                    catch8 ? 'transition-all animate-fade-in' : 'hidden'
+                  }`}
+                >
+                  <div className="h-[30px] flex items-center">
+                    <Image
+                      className=""
+                      src="/images/Product2LineRight.png"
+                      alt="productLine"
+                      width={191}
+                      height={6}
+                    />
+                  </div>
+                  <div className="h-[30px] flex items-center w-[300px] pt-[3px]">
+                    {t('products.3.1')}
+                  </div>
+                </div>
                 <Image
                   className="z-50"
                   src="/images/Product3_1.png"
@@ -803,7 +1091,25 @@ const Products = () => {
           ) : null}
           {currentProduct === 4 ? (
             <>
-              <div className={`${right880} ${top600}`}>
+              <div className={`${right880} ${top400}`}>
+                <div
+                  className={`absolute translate-y-[70px] translate-x-[40px] flex flex-col items-center w-[200px] ${
+                    catch8 ? 'transition-all animate-fade-in' : 'hidden'
+                  }`}
+                >
+                  <div className="h-[30px] flex items-center">
+                    {t('products.4.3')}
+                  </div>
+                  <div>
+                    <Image
+                      className=""
+                      src="/images/Product1_5Line.png"
+                      alt="productLine"
+                      width={6}
+                      height={139}
+                    />
+                  </div>
+                </div>
                 <Image
                   className="z-10 mr-[400px] mt-[200px]"
                   src="/images/Product4_3.png"
@@ -814,7 +1120,25 @@ const Products = () => {
                   priority
                 />
               </div>
-              <div className={`${right480} ${top300}`}>
+              <div className={`${right480} ${top200}`}>
+                <div
+                  className={`absolute translate-y-[70px] translate-x-[40px] flex flex-col items-center w-[200px] ${
+                    catch8 ? 'transition-all animate-fade-in' : 'hidden'
+                  }`}
+                >
+                  <div className="h-[30px] flex items-center">
+                    {t('products.4.2')}
+                  </div>
+                  <div>
+                    <Image
+                      className=""
+                      src="/images/Product1_5Line.png"
+                      alt="productLine"
+                      width={6}
+                      height={139}
+                    />
+                  </div>
+                </div>
                 <Image
                   className="z-20 mr-[400px] mt-[200px]"
                   src="/images/Product4_2.png"
@@ -826,6 +1150,24 @@ const Products = () => {
                 />
               </div>
               <div className="absolute">
+                <div
+                  className={`absolute translate-y-[70px] translate-x-[40px] flex flex-col items-center w-[200px] ${
+                    catch8 ? 'transition-all animate-fade-in' : 'hidden'
+                  }`}
+                >
+                  <div className="h-[30px] flex items-center">
+                    {t('products.4.1')}
+                  </div>
+                  <div>
+                    <Image
+                      className=""
+                      src="/images/Product1_5Line.png"
+                      alt="productLine"
+                      width={6}
+                      height={139}
+                    />
+                  </div>
+                </div>
                 <Image
                   className="z-30 mr-[400px] mt-[200px]"
                   src="/images/Product4_1.png"

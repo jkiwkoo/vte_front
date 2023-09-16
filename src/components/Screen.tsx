@@ -76,7 +76,7 @@ export const Screen = () => {
           </div>
         </div>
         <div className="w-[62.5vw] h-[51.042vw] absolute">
-          <Image src={`/images/Screen1.png`} alt="screen" fill quality={100} />
+          <Image src={`/images/_Screen1.png`} alt="screen" fill quality={100} />
         </div>
       </div>
       <div
@@ -144,7 +144,7 @@ export const Screen = () => {
           </div>
         </div>
         <div className="w-[62.5vw] h-[51.042vw] absolute">
-          <Image src={`/images/Screen2.png`} alt="screen" fill quality={100} />
+          <Image src={`/images/_Screen2.png`} alt="screen" fill quality={100} />
         </div>
       </div>
       <div
@@ -209,7 +209,7 @@ export const Screen = () => {
           </div>
         </div>
         <div className="w-[62.5vw] h-[51.042vw] absolute">
-          <Image src={`/images/Screen3.png`} alt="screen" fill quality={100} />
+          <Image src={`/images/_Screen3.png`} alt="screen" fill quality={100} />
         </div>
       </div>
     </div>

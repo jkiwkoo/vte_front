@@ -10,8 +10,9 @@ export const Flow = () => {
         <div className="pt-[4vw] font-notoSans text-white text-[36px]">
           {t('flow.title')}
         </div>
-        <div className="mt-[24px] mb-[8vw] font-notoSans text-vte-light-blue text-[21px]">
-          {t('flow.subTitle')}
+        <div className="mt-[24px] mb-[8vw] font-notoSans text-vte-light-blue text-[21px] flex flex-col items-center justify-center">
+          <div>{t('flow.subTitle')}</div>
+          <div>{t('flow.subTitle2')}</div>
         </div>
       </div>
       <div className="flex justify-center items-start text-white gap-[50px]">

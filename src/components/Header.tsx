@@ -50,7 +50,7 @@ export const Header = ({ isBlack }: HeaderProps) => {
             </div>
             <div
               className={`group hover:cursor-pointer h-min ${
-                isBlack && router.asPath === '/products'
+                isBlack && router.asPath.startsWith('/products')
                   ? 'text-white'
                   : 'hover:text-white'
               }`}
@@ -67,7 +67,7 @@ export const Header = ({ isBlack }: HeaderProps) => {
             </div>
             <div
               className={`group hover:cursor-pointer ${
-                isBlack && router.asPath === '/support'
+                isBlack && router.asPath.startsWith('/support')
                   ? 'text-white'
                   : 'hover:text-white'
               }`}

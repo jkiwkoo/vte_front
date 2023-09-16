@@ -15,8 +15,14 @@ const Company = () => {
         </div>
         <CompanyBar year="2012">
           <AnimatedText isGray noMargin text={t('company.2012.1')} />
-          <AnimatedText isGray isSmall noMargin text={t('company.2012.2')} />
-          <AnimatedText isGray isSmall text={t('company.2012.3')} />
+          <AnimatedText
+            isGray
+            isSmall
+            noMargin
+            smallTab
+            text={t('company.2012.2')}
+          />
+          <AnimatedText isGray isSmall smallTab text={t('company.2012.3')} />
           <AnimatedText isGray text={t('company.2012.4')} />
         </CompanyBar>
         <CompanyBar year="2013">
@@ -31,13 +37,13 @@ const Company = () => {
         </CompanyBar>
         <CompanyBar year="2015">
           <AnimatedText isGray noMargin text={t('company.2015.1')} />
-          <AnimatedText isGray isSmall text={t('company.2015.2')} />
+          <AnimatedText isGray isSmall smallTab text={t('company.2015.2')} />
         </CompanyBar>
         <CompanyBar year="2017">
           <AnimatedText noMargin text={t('company.2017.1')} />
-          <AnimatedText text={t('company.2017.2')} />
+          <AnimatedText tab text={t('company.2017.2')} />
           <AnimatedText noMargin text={t('company.2017.3')} />
-          <AnimatedText text={t('company.2017.4')} />
+          <AnimatedText tab text={t('company.2017.4')} />
         </CompanyBar>
         <CompanyBar year="2018">
           <AnimatedText isGray text={t('company.2018.1')} />
@@ -47,7 +53,7 @@ const Company = () => {
         <CompanyBar year="2019">
           <AnimatedText isGray text={t('company.2019.1')} />
           <AnimatedText noMargin text={t('company.2019.2')} />
-          <AnimatedText text={t('company.2019.3')} />
+          <AnimatedText tab text={t('company.2019.3')} />
           <AnimatedText isGray text={t('company.2019.4')} />
           <AnimatedText text={t('company.2019.5')} />
         </CompanyBar>

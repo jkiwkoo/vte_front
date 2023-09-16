@@ -5,6 +5,8 @@ type AnimatedTextProps = {
   isSmall?: boolean;
   isGray?: boolean;
   noMargin?: boolean;
+  smallTab?: boolean;
+  tab?: boolean;
 };
 
 export const AnimatedText = ({
@@ -12,6 +14,8 @@ export const AnimatedText = ({
   noMargin,
   isSmall,
   isGray,
+  smallTab,
+  tab,
 }: AnimatedTextProps) => {
   const ref = useRef<HTMLDivElement | null>(null);
   const [visible, setVisible] = useState(false);
@@ -43,7 +47,9 @@ export const AnimatedText = ({
         visible ? 'opacity-100 animate-fade-in-down' : 'opacity-0'
       } ${isSmall ? 'text-[16px]' : isGray ? 'text-[18px]' : 'text-[20px]'} ${
         isGray ? 'text-vte-gray-3' : 'text-white'
-      } ${!noMargin ? 'mb-[20px]' : null}`}
+      } ${!noMargin ? 'mb-[20px]' : null} ${tab ? 'ml-[23px]' : ''} ${
+        smallTab ? 'ml-[14px]' : ''
+      }`}
       ref={ref}
     >
       {text}

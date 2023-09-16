@@ -1,13 +1,19 @@
 import { ContactUs } from '@/components/ContactUs';
 import { CustomerSupport } from '@/components/CustomerSupport';
 import { Header } from '@/components/Header';
-import { useState } from 'react';
+import { useRouter } from 'next/router';
+import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 const Support = () => {
   const { t } = useTranslation();
+  const router = useRouter();
 
   const [isContactUs, setIsContactUs] = useState(false);
+
+  useEffect(() => {
+    router.query?.tab ? setIsContactUs(true) : null;
+  }, []);
 
   return (
     <>

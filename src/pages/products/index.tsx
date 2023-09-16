@@ -1,11 +1,17 @@
 import { Header } from '@/components/Header';
 import { Observer } from '@/components/Observer';
 import Image from 'next/image';
-import { useState } from 'react';
+import { useRouter } from 'next/router';
+import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 const Products = () => {
   const { t } = useTranslation();
+  const router = useRouter();
+
+  useEffect(() => {
+    router.query?.product ? setCurrentProduct(+router.query?.product) : null;
+  }, []);
 
   const [currentProduct, setCurrentProduct] = useState(1);
 
@@ -46,6 +52,54 @@ const Products = () => {
       : ''
   }`;
 
+  const right700 = `absolute delay-75 transition-all duration-1000 ${
+    catch9
+      ? 'ml-[700px]'
+      : catch8
+      ? 'ml-[630px]'
+      : catch7
+      ? 'ml-[560px]'
+      : catch6
+      ? 'ml-[490px]'
+      : catch5
+      ? 'ml-[420px]'
+      : catch4
+      ? 'ml-[350px]'
+      : catch3
+      ? 'ml-[280px]'
+      : catch2
+      ? 'ml-[210px]'
+      : catch1
+      ? 'ml-[140px]'
+      : catch0
+      ? 'ml-[70px]'
+      : ''
+  }`;
+
+  const right600 = `absolute delay-75 transition-all duration-1000 ${
+    catch9
+      ? 'ml-[600px]'
+      : catch8
+      ? 'ml-[540px]'
+      : catch7
+      ? 'ml-[480px]'
+      : catch6
+      ? 'ml-[420px]'
+      : catch5
+      ? 'ml-[360px]'
+      : catch4
+      ? 'ml-[300px]'
+      : catch3
+      ? 'ml-[240px]'
+      : catch2
+      ? 'ml-[180px]'
+      : catch1
+      ? 'ml-[120px]'
+      : catch0
+      ? 'ml-[60px]'
+      : ''
+  }`;
+
   const right480 = `absolute delay-75 transition-all duration-1000 ${
     catch9
       ? 'ml-[480px]'
@@ -67,6 +121,30 @@ const Products = () => {
       ? 'ml-[96px]'
       : catch0
       ? 'ml-[48px]'
+      : ''
+  }`;
+
+  const right300 = `absolute delay-75 transition-all duration-1000 ${
+    catch9
+      ? 'ml-[300px]'
+      : catch8
+      ? 'ml-[270px]'
+      : catch7
+      ? 'ml-[240px]'
+      : catch6
+      ? 'ml-[210px]'
+      : catch5
+      ? 'ml-[180px]'
+      : catch4
+      ? 'ml-[150px]'
+      : catch3
+      ? 'ml-[120px]'
+      : catch2
+      ? 'ml-[90px]'
+      : catch1
+      ? 'ml-[60px]'
+      : catch0
+      ? 'ml-[30px]'
       : ''
   }`;
 
@@ -118,6 +196,30 @@ const Products = () => {
       : ''
   }`;
 
+  const left700 = `absolute delay-75 transition-all duration-1000 ${
+    catch9
+      ? 'mr-[700px]'
+      : catch8
+      ? 'mr-[630px]'
+      : catch7
+      ? 'mr-[560px]'
+      : catch6
+      ? 'mr-[490px]'
+      : catch5
+      ? 'mr-[420px]'
+      : catch4
+      ? 'mr-[350px]'
+      : catch3
+      ? 'mr-[280px]'
+      : catch2
+      ? 'mr-[210px]'
+      : catch1
+      ? 'mr-[140px]'
+      : catch0
+      ? 'mr-[70px]'
+      : ''
+  }`;
+
   const left480 = `absolute delay-75 transition-all duration-1000 ${
     catch9
       ? 'mr-[480px]'
@@ -139,6 +241,30 @@ const Products = () => {
       ? 'mr-[96px]'
       : catch0
       ? 'mr-[48px]'
+      : ''
+  }`;
+
+  const left300 = `absolute delay-75 transition-all duration-1000 ${
+    catch9
+      ? 'mr-[300px]'
+      : catch8
+      ? 'mr-[270px]'
+      : catch7
+      ? 'mr-[240px]'
+      : catch6
+      ? 'mr-[210px]'
+      : catch5
+      ? 'mr-[180px]'
+      : catch4
+      ? 'mr-[150px]'
+      : catch3
+      ? 'mr-[120px]'
+      : catch2
+      ? 'mr-[90px]'
+      : catch1
+      ? 'mr-[60px]'
+      : catch0
+      ? 'mr-[30px]'
       : ''
   }`;
 
@@ -214,11 +340,35 @@ const Products = () => {
       : ''
   }`;
 
+  const bottom100 = `absolute delay-75 transition-all duration-1000 ${
+    catch9
+      ? 'mt-[100px]'
+      : catch8
+      ? 'mt-[90px]'
+      : catch7
+      ? 'mt-[80px]'
+      : catch6
+      ? 'mt-[70px]'
+      : catch5
+      ? 'mt-[60px]'
+      : catch4
+      ? 'mt-[50px]'
+      : catch3
+      ? 'mt-[40px]'
+      : catch2
+      ? 'mt-[30px]'
+      : catch1
+      ? 'mt-[20px]'
+      : catch0
+      ? 'mt-[10px]'
+      : ''
+  }`;
+
   const top400 = `absolute delay-75 transition-all duration-1000 ${
     catch9
       ? 'mb-[400px]'
       : catch8
-      ? 'mb-[260px]'
+      ? 'mb-[360px]'
       : catch7
       ? 'mb-[320px]'
       : catch6
@@ -262,6 +412,30 @@ const Products = () => {
       : ''
   }`;
 
+  const top100 = `absolute delay-75 transition-all duration-1000 ${
+    catch9
+      ? 'mb-[100px]'
+      : catch8
+      ? 'mb-[90px]'
+      : catch7
+      ? 'mb-[80px]'
+      : catch6
+      ? 'mb-[70px]'
+      : catch5
+      ? 'mb-[60px]'
+      : catch4
+      ? 'mb-[50px]'
+      : catch3
+      ? 'mb-[40px]'
+      : catch2
+      ? 'mb-[30px]'
+      : catch1
+      ? 'mb-[20px]'
+      : catch0
+      ? 'mb-[10px]'
+      : ''
+  }`;
+
   return (
     <>
       <Header isBlack={true} />
@@ -279,7 +453,7 @@ const Products = () => {
             >
               <div className="flex flex-col items-center">
                 <div
-                  className={`w-[120px] flex justify-center ${
+                  className={`w-[160px] flex justify-center ${
                     currentProduct === 1
                       ? 'text-white'
                       : 'text-vte-gray-6 hover:cursor-pointer group-hover:text-white'
@@ -288,7 +462,7 @@ const Products = () => {
                   {t('glass.1.title')}
                 </div>
               </div>
-              <div className="w-[120px] flex justify-center">
+              <div className="w-[160px] flex justify-center">
                 <div className="w-[33px] h-[33px] flex items-center justify-center">
                   {currentProduct === 1 ? (
                     <Image
@@ -328,7 +502,7 @@ const Products = () => {
             >
               <div className="flex flex-col items-center">
                 <div
-                  className={`w-[120px] flex justify-center ${
+                  className={`w-[160px] flex justify-center ${
                     currentProduct === 2
                       ? 'text-white'
                       : 'text-vte-gray-6 hover:cursor-pointer group-hover:text-white'
@@ -337,7 +511,7 @@ const Products = () => {
                   {t('glass.2.title')}
                 </div>
               </div>
-              <div className="w-[120px] flex justify-center">
+              <div className="w-[160px] flex justify-center">
                 <div className="w-[33px] h-[33px] flex items-center justify-center">
                   {currentProduct === 2 ? (
                     <Image
@@ -377,7 +551,7 @@ const Products = () => {
             >
               <div className="flex flex-col items-center">
                 <div
-                  className={`w-[120px] flex justify-center ${
+                  className={`w-[160px] flex justify-center ${
                     currentProduct === 3
                       ? 'text-white'
                       : 'text-vte-gray-6 hover:cursor-pointer group-hover:text-white'
@@ -386,7 +560,7 @@ const Products = () => {
                   {t('glass.3.title')}
                 </div>
               </div>
-              <div className="w-[120px] flex justify-center">
+              <div className="w-[160px] flex justify-center">
                 <div className="w-[33px] h-[33px] flex items-center justify-center">
                   {currentProduct === 3 ? (
                     <Image
@@ -426,7 +600,7 @@ const Products = () => {
             >
               <div className="flex flex-col items-center">
                 <div
-                  className={`w-[120px] flex justify-center ${
+                  className={`w-[160px] flex justify-center ${
                     currentProduct === 4
                       ? 'text-white'
                       : 'text-vte-gray-6 hover:cursor-pointer group-hover:text-white'
@@ -435,7 +609,7 @@ const Products = () => {
                   {t('glass.4.title')}
                 </div>
               </div>
-              <div className="w-[120px] flex justify-center">
+              <div className="w-[160px] flex justify-center">
                 <div className="w-[33px] h-[33px] flex items-center justify-center">
                   {currentProduct === 4 ? (
                     <Image
@@ -487,10 +661,27 @@ const Products = () => {
               } `}
             >
               <Image src="/images/Product1.png" alt="product" fill />
-              <div className="mt-[8.91vw] ml-[5vw] font-apple text-white w-[500px]">
-                <div className="text-[18px]">{t('glass.1.title')}</div>
-                <div className="text-[42px]">{t('glass.1.subTitle')}</div>
-                <div className="text-[20px]">{t('glass.1.description')}</div>
+              <div className="mt-[8.91vw] ml-[3vw] font-apple text-white w-[500px]">
+                <div className="text-[42px]">{t('glass.1.title2')}</div>
+                <div className="mt-[20px] text-[20px]">
+                  {t('glass.1.description3')}
+                </div>
+                <div className="text-[20px]">{t('glass.1.description4')}</div>
+                <div className="text-[20px]">{t('glass.1.description5')}</div>
+                <div className="text-[20px]">{t('glass.1.description6')}</div>
+                <div
+                  className="mt-[30px] text-[20px] text-vte-violet2 hover:cursor-pointer"
+                  onClick={() => {
+                    router.push({
+                      pathname: `/support`,
+                      query: {
+                        tab: '2',
+                      },
+                    });
+                  }}
+                >
+                  {t('word.contact')}
+                </div>
               </div>
             </div>
             <div className="w-[77.344vw] h-[36.927vw] relative mr-[22.657vw] animate-fade-in-left">
@@ -519,9 +710,24 @@ const Products = () => {
             >
               <Image src="/images/Product2.png" alt="product" fill />
               <div className="mt-[24vw] ml-[2vw] font-apple text-white w-[500px]">
-                <div className="text-[18px]">{t('glass.2.title')}</div>
-                <div className="text-[42px]">{t('glass.2.subTitle')}</div>
-                <div className="text-[20px]">{t('glass.2.description')}</div>
+                <div className="text-[42px]">{t('glass.2.title')}</div>
+                <div className="mt-[20px] text-[20px]">
+                  {t('glass.2.description3')}
+                </div>
+                <div className="text-[20px]">{t('glass.2.description4')}</div>
+                <div
+                  className="mt-[30px] text-[20px] text-vte-violet2 hover:cursor-pointer"
+                  onClick={() => {
+                    router.push({
+                      pathname: `/support`,
+                      query: {
+                        tab: '2',
+                      },
+                    });
+                  }}
+                >
+                  {t('word.contact')}
+                </div>
               </div>
             </div>
             <div className="w-[32.4vw] h-[49vw] relative ml-[13.6vw] animate-fade-in-left">
@@ -552,10 +758,28 @@ const Products = () => {
               } `}
             >
               <Image src="/images/Product3.png" alt="product" fill />
-              <div className="mt-[13vw] ml-[2vw] font-apple text-white w-[500px]">
-                <div className="text-[18px]">{t('glass.3.title')}</div>
-                <div className="text-[42px]">{t('glass.3.subTitle')}</div>
-                <div className="text-[20px]">{t('glass.3.description')}</div>
+              <div className="mt-[13vw] ml-[2vw] font-apple text-white w-[700px]">
+                <div className="text-[42px]">{t('glass.3.title')}</div>
+                <div className="mt-[20px] text-[20px]">
+                  {t('glass.3.description3')}
+                </div>
+                <div className="text-[20px]">{t('glass.3.description4')}</div>
+                <div className="text-[20px]">{t('glass.3.description5')}</div>
+                <div className="text-[20px]">{t('glass.3.description6')}</div>
+                <div className="text-[20px]">{t('glass.3.description7')}</div>
+                <div
+                  className="mt-[30px] text-[20px] text-vte-violet2 hover:cursor-pointer"
+                  onClick={() => {
+                    router.push({
+                      pathname: `/support`,
+                      query: {
+                        tab: '2',
+                      },
+                    });
+                  }}
+                >
+                  {t('word.contact')}
+                </div>
               </div>
             </div>
             <div
@@ -583,20 +807,44 @@ const Products = () => {
               } `}
             >
               <Image src="/images/Product4.png" alt="product" fill />
-              <div className="mt-[20vw] ml-[5vw] font-apple text-white w-[500px]">
-                <div className="text-[18px]">{t('glass.4.title')}</div>
-                <div className="text-[42px]">{t('glass.4.subTitle')}</div>
-                <div className="text-[20px]">{t('glass.4.description')}</div>
+              <div className="mt-[20vw] ml-[1vw] font-apple text-white w-[500px]">
+                <div className="text-[42px]">{t('glass.4.title2')}</div>
+                <div className="mt-[20px] text-[20px]">
+                  {t('glass.4.description3')}
+                </div>
+                <div className="text-[20px]">{t('glass.4.description4')}</div>
+                <div className="text-[20px]">{t('glass.4.description5')}</div>
+                <div className="text-[20px]">{t('glass.4.description6')}</div>
+                <div className="text-[20px]">{t('glass.4.description7')}</div>
+                <div className="mt-[30px] text-[20px] font-bold">
+                  {t('glass.4.description8')}
+                </div>
+                <div className="text-[20px] font-bold">
+                  {t('glass.4.description9')}
+                </div>
+                <div
+                  className="mt-[30px] text-[20px] text-vte-violet2 hover:cursor-pointer"
+                  onClick={() => {
+                    router.push({
+                      pathname: `/support`,
+                      query: {
+                        tab: '2',
+                      },
+                    });
+                  }}
+                >
+                  {t('word.contact')}
+                </div>
               </div>
             </div>
             <div
-              className={`w-[20.677vw] h-[8.125vw] z-10 absolute mt-[9.843vw] ml-[35vw] ${
+              className={`w-[20.677vw] h-[8.125vw] z-10 absolute mt-[9.843vw] ml-[32vw] ${
                 pageCatch ? 'transition-all animate-fade-in-down2' : 'hidden'
               } `}
             >
               <Image src="/images/Product4Line.png" alt="product" fill />
             </div>
-            <div className="w-[63.9vw] h-[42.66vw] relative ml-[12.6vw] animate-fade-in-left">
+            <div className="w-[46.67vw] h-[37.81vw] relative ml-[12.6vw] animate-fade-in-left">
               <Image
                 src="/images/ProductBg4.png"
                 alt="product"
@@ -624,7 +872,7 @@ const Products = () => {
               <div className={left130}>
                 <div
                   className={`absolute translate-y-[267px] translate-x-[-78px] flex flex-col items-center w-[200px] ${
-                    catch8 ? 'transition-all animate-fade-in' : 'hidden'
+                    catch7 ? 'transition-all animate-fade-in' : 'hidden'
                   }`}
                 >
                   <div>
@@ -649,23 +897,23 @@ const Products = () => {
                   quality={100}
                 />
               </div>
-              <div className={left480}>
+              <div className={left300}>
                 <div
-                  className={`absolute translate-y-[267px] translate-x-[-60px] flex flex-col items-center w-[200px] ${
-                    catch8 ? 'transition-all animate-fade-in' : 'hidden'
+                  className={`absolute translate-y-[-179px] translate-x-[-60px] flex flex-col items-center w-[200px] ${
+                    catch7 ? 'transition-all animate-fade-in' : 'hidden'
                   }`}
                 >
+                  <div className="h-[30px] flex items-center">
+                    {t('products.1.2')}
+                  </div>
                   <div>
                     <Image
                       className=""
-                      src="/images/Product1_2Line.png"
+                      src="/images/Product1_5Line.png"
                       alt="productLine"
                       width={6}
                       height={139}
                     />
-                  </div>
-                  <div className="h-[30px] flex items-center">
-                    {t('products.1.2')}
                   </div>
                 </div>
                 <Image
@@ -677,10 +925,10 @@ const Products = () => {
                   quality={100}
                 />
               </div>
-              <div className={left880}>
+              <div className={left700}>
                 <div
                   className={`absolute translate-y-[323px] translate-x-[-70px] flex flex-col items-center w-[200px] ${
-                    catch8 ? 'transition-all animate-fade-in' : 'hidden'
+                    catch7 ? 'transition-all animate-fade-in' : 'hidden'
                   }`}
                 >
                   <div>
@@ -707,21 +955,21 @@ const Products = () => {
               </div>
               <div className={right130}>
                 <div
-                  className={`absolute translate-y-[-126px] translate-x-[-34px] flex flex-col items-center w-[200px] ${
-                    catch8 ? 'transition-all animate-fade-in' : 'hidden'
+                  className={`absolute translate-y-[267px] translate-x-[-34px] flex flex-col items-center w-[200px] ${
+                    catch7 ? 'transition-all animate-fade-in' : 'hidden'
                   }`}
                 >
-                  <div className="h-[30px] flex items-center">
-                    {t('products.1.4')}
-                  </div>
                   <div>
                     <Image
                       className=""
-                      src="/images/Product1_4Line.png"
+                      src="/images/Product1_3Line.png"
                       alt="productLine"
                       width={6}
                       height={86}
                     />
+                  </div>
+                  <div className="h-[30px] flex items-center">
+                    {t('products.1.4')}
                   </div>
                 </div>
                 <Image
@@ -733,10 +981,10 @@ const Products = () => {
                   quality={100}
                 />
               </div>
-              <div className={right480}>
+              <div className={right300}>
                 <div
                   className={`absolute translate-y-[-179px] translate-x-[-1px] flex flex-col items-center w-[200px] ${
-                    catch8 ? 'transition-all animate-fade-in' : 'hidden'
+                    catch7 ? 'transition-all animate-fade-in' : 'hidden'
                   }`}
                 >
                   <div className="h-[30px] flex items-center">
@@ -761,23 +1009,23 @@ const Products = () => {
                   quality={100}
                 />
               </div>
-              <div className={right880}>
+              <div className={right700}>
                 <div
-                  className={`absolute translate-y-[-231px] translate-x-[58px] flex flex-col items-center w-[200px] ${
-                    catch8 ? 'transition-all animate-fade-in' : 'hidden'
+                  className={`absolute translate-y-[323px] translate-x-[58px] flex flex-col items-center w-[200px] ${
+                    catch7 ? 'transition-all animate-fade-in' : 'hidden'
                   }`}
                 >
-                  <div className="h-[30px] flex items-center">
-                    {t('products.1.6')}
-                  </div>
                   <div>
                     <Image
                       className=""
-                      src="/images/Product1_6Line.png"
+                      src="/images/Product1_1Line.png"
                       alt="productLine"
                       width={6}
                       height={191}
                     />
+                  </div>
+                  <div className="h-[30px] flex items-center">
+                    {t('products.1.6')}
                   </div>
                 </div>
                 <Image
@@ -793,10 +1041,10 @@ const Products = () => {
           ) : null}
           {currentProduct === 2 ? (
             <>
-              <div className={`${left880} ${top400}`}>
+              <div className={`${left880} ${top200}`}>
                 <div
-                  className={`absolute translate-y-[40px] translate-x-[252px] flex justify-between gap-[10px] ${
-                    catch8 ? 'transition-all animate-fade-in' : 'hidden'
+                  className={`absolute translate-y-[20px] translate-x-[230px] flex justify-between gap-[10px] ${
+                    catch7 ? 'transition-all animate-fade-in' : 'hidden'
                   }`}
                 >
                   <div className="h-[30px] flex items-center">
@@ -822,10 +1070,10 @@ const Products = () => {
                   priority
                 />
               </div>
-              <div className={`${left480} ${top200}`}>
+              <div className={`${left480} ${top100}`}>
                 <div
-                  className={`absolute translate-y-[40px] translate-x-[290px] flex justify-between gap-[10px] ${
-                    catch8 ? 'transition-all animate-fade-in' : 'hidden'
+                  className={`absolute translate-y-[20px] translate-x-[260px] flex justify-between gap-[10px] ${
+                    catch7 ? 'transition-all animate-fade-in' : 'hidden'
                   }`}
                 >
                   <div className="h-[30px] flex items-center">
@@ -853,8 +1101,8 @@ const Products = () => {
               </div>
               <div className="absolute">
                 <div
-                  className={`absolute translate-y-[40px] translate-x-[270px] flex justify-between gap-[10px] ${
-                    catch8 ? 'transition-all animate-fade-in' : 'hidden'
+                  className={`absolute translate-y-[20px] translate-x-[240px] flex justify-between gap-[10px] ${
+                    catch7 ? 'transition-all animate-fade-in' : 'hidden'
                   }`}
                 >
                   <div className="h-[30px] flex items-center">
@@ -880,10 +1128,10 @@ const Products = () => {
                   priority
                 />
               </div>
-              <div className={`${right480} ${bottom200}`}>
+              <div className={`${right480} ${bottom100}`}>
                 <div
-                  className={`absolute translate-y-[500px] translate-x-[-310px] flex justify-between gap-[10px] ${
-                    catch8 ? 'transition-all animate-fade-in' : 'hidden'
+                  className={`absolute translate-y-[530px] translate-x-[-280px] flex justify-between gap-[10px] ${
+                    catch7 ? 'transition-all animate-fade-in' : 'hidden'
                   }`}
                 >
                   <div className="h-[30px] flex items-center justify-end w-[300px] pt-[3px]">
@@ -909,10 +1157,10 @@ const Products = () => {
                   priority
                 />
               </div>
-              <div className={`${right880} ${bottom400}`}>
+              <div className={`${right880} ${bottom200}`}>
                 <div
-                  className={`absolute translate-y-[500px] translate-x-[-300px] flex justify-between gap-[10px] ${
-                    catch8 ? 'transition-all animate-fade-in' : 'hidden'
+                  className={`absolute translate-y-[550px] translate-x-[-270px] flex justify-between gap-[10px] ${
+                    catch7 ? 'transition-all animate-fade-in' : 'hidden'
                   }`}
                 >
                   <div className="h-[30px] flex items-center justify-end w-[300px] pt-[3px]">
@@ -942,9 +1190,9 @@ const Products = () => {
           ) : null}
           {currentProduct === 3 ? (
             <>
-              <div className={`${right880} ${top400}`}>
+              <div className={`${right700} ${top400}`}>
                 <div
-                  className={`absolute translate-y-[70px] translate-x-[-500px] flex justify-between gap-[10px] ${
+                  className={`absolute translate-y-[70px] translate-x-[-400px] flex justify-between gap-[10px] ${
                     catch8 ? 'transition-all animate-fade-in' : 'hidden'
                   }`}
                 >
@@ -965,15 +1213,15 @@ const Products = () => {
                   className="z-10"
                   src="/images/Product3_5.png"
                   alt="product"
-                  width={747}
-                  height={360}
+                  width={420}
+                  height={210}
                   quality={100}
                   priority
                 />
               </div>
-              <div className={`${right480} ${top200}`}>
+              <div className={`${right300} ${top200}`}>
                 <div
-                  className={`absolute translate-y-[70px] translate-x-[-500px] flex justify-between gap-[10px] ${
+                  className={`absolute translate-y-[70px] translate-x-[-400px] flex justify-between gap-[10px] ${
                     catch8 ? 'transition-all animate-fade-in' : 'hidden'
                   }`}
                 >
@@ -994,15 +1242,15 @@ const Products = () => {
                   className="z-20"
                   src="/images/Product3_4.png"
                   alt="product"
-                  width={747}
-                  height={360}
+                  width={420}
+                  height={210}
                   quality={100}
                   priority
                 />
               </div>
               <div className="absolute">
                 <div
-                  className={`absolute translate-y-[70px] translate-x-[-500px] flex justify-between gap-[10px] ${
+                  className={`absolute translate-y-[70px] translate-x-[-400px] flex justify-between gap-[10px] ${
                     catch8 ? 'transition-all animate-fade-in' : 'hidden'
                   }`}
                 >
@@ -1023,15 +1271,15 @@ const Products = () => {
                   className="z-30"
                   src="/images/Product3_3.png"
                   alt="product"
-                  width={747}
-                  height={360}
+                  width={420}
+                  height={210}
                   quality={100}
                   priority
                 />
               </div>
-              <div className={`${left480} ${bottom200}`}>
+              <div className={`${left300} ${bottom200}`}>
                 <div
-                  className={`absolute translate-y-[280px] translate-x-[770px] flex justify-between gap-[10px] ${
+                  className={`absolute translate-y-[150px] translate-x-[400px] flex justify-between gap-[10px] ${
                     catch8 ? 'transition-all animate-fade-in' : 'hidden'
                   }`}
                 >
@@ -1052,15 +1300,15 @@ const Products = () => {
                   className="z-40"
                   src="/images/Product3_2.png"
                   alt="product"
-                  width={747}
-                  height={360}
+                  width={420}
+                  height={210}
                   quality={100}
                   priority
                 />
               </div>
-              <div className={`${left880} ${bottom400}`}>
+              <div className={`${left700} ${bottom400}`}>
                 <div
-                  className={`absolute translate-y-[280px] translate-x-[770px] flex justify-between gap-[10px] ${
+                  className={`absolute translate-y-[150px] translate-x-[400px] flex justify-between gap-[10px] ${
                     catch8 ? 'transition-all animate-fade-in' : 'hidden'
                   }`}
                 >
@@ -1081,8 +1329,8 @@ const Products = () => {
                   className="z-50"
                   src="/images/Product3_1.png"
                   alt="product"
-                  width={747}
-                  height={360}
+                  width={420}
+                  height={210}
                   quality={100}
                   priority
                 />
@@ -1091,10 +1339,10 @@ const Products = () => {
           ) : null}
           {currentProduct === 4 ? (
             <>
-              <div className={`${right880} ${top400}`}>
+              <div className={`${right600} ${top200}`}>
                 <div
-                  className={`absolute translate-y-[70px] translate-x-[40px] flex flex-col items-center w-[200px] ${
-                    catch8 ? 'transition-all animate-fade-in' : 'hidden'
+                  className={`absolute translate-y-[100px] translate-x-[-20px] flex flex-col items-center w-[200px] ${
+                    catch6 ? 'transition-all animate-fade-in' : 'hidden'
                   }`}
                 >
                   <div className="h-[30px] flex items-center">
@@ -1111,19 +1359,19 @@ const Products = () => {
                   </div>
                 </div>
                 <Image
-                  className="z-10 mr-[400px] mt-[200px]"
+                  className="z-10 mr-[350px] mt-[200px]"
                   src="/images/Product4_3.png"
                   alt="product"
-                  width={513}
-                  height={529}
+                  width={310}
+                  height={320}
                   quality={100}
                   priority
                 />
               </div>
-              <div className={`${right480} ${top200}`}>
+              <div className={`${right300} ${top100}`}>
                 <div
-                  className={`absolute translate-y-[70px] translate-x-[40px] flex flex-col items-center w-[200px] ${
-                    catch8 ? 'transition-all animate-fade-in' : 'hidden'
+                  className={`absolute translate-y-[100px] translate-x-[-20px] flex flex-col items-center w-[200px] ${
+                    catch6 ? 'transition-all animate-fade-in' : 'hidden'
                   }`}
                 >
                   <div className="h-[30px] flex items-center">
@@ -1140,19 +1388,19 @@ const Products = () => {
                   </div>
                 </div>
                 <Image
-                  className="z-20 mr-[400px] mt-[200px]"
+                  className="z-20 mr-[350px] mt-[200px]"
                   src="/images/Product4_2.png"
                   alt="product"
-                  width={513}
-                  height={529}
+                  width={310}
+                  height={320}
                   quality={100}
                   priority
                 />
               </div>
               <div className="absolute">
                 <div
-                  className={`absolute translate-y-[70px] translate-x-[40px] flex flex-col items-center w-[200px] ${
-                    catch8 ? 'transition-all animate-fade-in' : 'hidden'
+                  className={`absolute translate-y-[100px] translate-x-[-10px] flex flex-col items-center w-[200px] ${
+                    catch6 ? 'transition-all animate-fade-in' : 'hidden'
                   }`}
                 >
                   <div className="h-[30px] flex items-center">
@@ -1169,22 +1417,22 @@ const Products = () => {
                   </div>
                 </div>
                 <Image
-                  className="z-30 mr-[400px] mt-[200px]"
+                  className="z-30 mr-[350px] mt-[200px]"
                   src="/images/Product4_1.png"
                   alt="product"
-                  width={513}
-                  height={529}
+                  width={310}
+                  height={320}
                   quality={100}
                   priority
                 />
               </div>
               <div className="absolute">
                 <Image
-                  className="z-30 mr-[600px] mt-[400px]"
+                  className="z-30 mr-[500px] mt-[350px]"
                   src="/images/Product4Sub.png"
                   alt="product"
-                  width={582}
-                  height={605}
+                  width={337}
+                  height={360}
                   quality={100}
                   priority
                 />

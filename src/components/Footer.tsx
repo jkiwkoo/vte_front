@@ -46,11 +46,11 @@ export const Footer = () => {
       </div>
       <div className="mt-[30px]">
         <div className="flex items-center justify-center gap-[20px]">
-          <div className="flex">
+          <div className="flex gap-[4px]">
             <div className="font-bold">{t('word.tel')}</div>
             <div>{t('footer.tel')}</div>
           </div>
-          <div className="flex">
+          <div className="flex gap-[4px]">
             <div className="font-bold">{t('word.fax')}</div>
             <div>{t('footer.fax')}</div>
           </div>

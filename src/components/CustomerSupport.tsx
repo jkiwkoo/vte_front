@@ -36,9 +36,12 @@ export const CustomerSupport = () => {
     <div className="w-[62.5vw] h-[100vh]">
       <Line virtualWidth="62.5" />
       <Line virtualWidth="62.5" end />
-      <SupportDetail method="자료" title="FOO" url="" />
-      <SupportDetail method="견적" title="BAR" url="" />
-      <SupportDetail method="견적" title="BAZ" url="" />
+      <SupportDetail method="자료" title="About us" url="" />
+      <SupportDetail
+        method="견적"
+        title="특수 유리 견적이 궁금합니다."
+        url=""
+      />
       <Line virtualWidth="62.5" end />
     </div>
   );

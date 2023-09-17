@@ -10,6 +10,8 @@ export const ContactUs = () => {
   const [firstNumber, setFirstNumber] = useState('010');
   const [middleNumber, setMiddleNumber] = useState('');
   const [lastNumber, setLastNumber] = useState('');
+  const [telCode, setTelCode] = useState('+82');
+  const [telNumber, setTelNumber] = useState('');
   const [email, setEmail] = useState('');
   const [domain, setDomain] = useState('');
   const [isDirect, setIsDirect] = useState(true);
@@ -26,6 +28,8 @@ export const ContactUs = () => {
     setIsDirect(true);
     setSubject('');
     setMessage('');
+    setTelCode('+82');
+    setTelNumber('');
   };
 
   const isNumber = (number: string) => {
@@ -34,9 +38,16 @@ export const ContactUs = () => {
     return re.test(number);
   };
 
+  const isNumber2 = (number: string) => {
+    const re = new RegExp('^[0-9]*$');
+
+    return re.test(number);
+  };
+
   const sendEmail = () => {
     const templateParams = {
       name: name,
+      tel: `${telCode} ${telNumber}`,
       number: `${firstNumber}-${middleNumber}-${lastNumber}`,
       email: `${email}@${domain}`,
       subject: subject,
@@ -73,6 +84,35 @@ export const ContactUs = () => {
             }}
             value={name}
           />
+        </div>
+      </div>
+      <Line virtualWidth="51.04vw" />
+      <div className="flex items-center h-[70px]">
+        <div className="w-[11.3vw] pl-[20px]">{t('word.phone')}</div>
+        <div className="flex gap-[1.302vw]">
+          <div className="w-[4.6875vw] bg-white flex items-center px-[5px] h-[32px] text-[14px] text-black">
+            <select
+              className="w-full"
+              value={telCode}
+              onChange={(e) => {
+                setTelCode(e.target.value);
+              }}
+            >
+              <option value="+82">+82</option>
+              <option value="+86">+86</option>
+              <option value="+1">+1</option>
+            </select>
+          </div>
+          <div className="w-[10.677vw] bg-white flex items-center px-[5px] h-[32px] text-[14px] text-black">
+            <input
+              spellCheck={false}
+              className="w-full bg-transparent outline-none"
+              onChange={(e) => {
+                isNumber2(e.target.value) ? setTelNumber(e.target.value) : null;
+              }}
+              value={telNumber}
+            />
+          </div>
         </div>
       </div>
       <Line virtualWidth="51.04vw" />

@@ -1,5 +1,6 @@
 import { Header } from '@/components/Header';
 import { Observer } from '@/components/Observer';
+import { ProductDetail } from '@/components/ProductDetail';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
@@ -649,14 +650,28 @@ const Products = () => {
         {currentProduct === 1 ? (
           <>
             <div
-              className={`w-[25.42vw] h-[7.5vw] z-10 absolute mt-[3.23vw] ml-[33.125vw] ${
+              className={`w-[21.979vw] h-[4.479vw] z-10 absolute mt-[8vw] ml-[39vw] ${
                 pageCatch ? 'transition-all animate-fade-in-down2' : 'hidden'
               } `}
             >
-              <Image src="/images/Product1Line.png" alt="product" fill />
+              <Image src="/images/Product1Line1.png" alt="product" fill />
             </div>
             <div
-              className={`w-[10vw] h-[8.91vw] z-10 absolute mt-[7.45vw] ml-[57.5vw] ${
+              className={`w-[36.354vw] h-[0.3125vw] z-10 absolute mt-[13.6vw] ml-[24.5vw] ${
+                pageCatch ? 'transition-all animate-fade-in-down2' : 'hidden'
+              } `}
+            >
+              <Image src="/images/Product1Line2.png" alt="product" fill />
+            </div>
+            <div
+              className={`w-[14.635vw] h-[4.219vw] z-10 absolute mt-[15.5vw] ml-[46.5vw] ${
+                pageCatch ? 'transition-all animate-fade-in-down2' : 'hidden'
+              } `}
+            >
+              <Image src="/images/Product1Line3.png" alt="product" fill />
+            </div>
+            <div
+              className={`w-[10vw] h-[8.91vw] z-10 absolute mt-[10vw] ml-[62vw] ${
                 pageCatch ? 'transition-all animate-fade-in-down2' : 'hidden'
               } `}
             >
@@ -684,9 +699,9 @@ const Products = () => {
                 </div>
               </div>
             </div>
-            <div className="w-[77.344vw] h-[36.927vw] relative mr-[22.657vw] animate-fade-in-left">
+            <div className="w-[87.5vw] h-[39.375vw] relative mr-[18.333vw] animate-fade-in-left">
               <Image
-                src="/images/ProductBg1.png"
+                src="/images/_ProductBg1.png"
                 alt="product"
                 fill
                 quality={100}
@@ -757,7 +772,7 @@ const Products = () => {
                 pageCatch ? 'transition-all animate-fade-in-down2' : 'hidden'
               } `}
             >
-              <Image src="/images/Product3.png" alt="product" fill />
+              <Image src="/images/_Product3.png" alt="product" fill />
               <div className="mt-[13vw] ml-[2vw] font-apple text-white w-[700px]">
                 <div className="text-[42px]">{t('glass.3.title')}</div>
                 <div className="mt-[20px] text-[20px]">
@@ -1441,6 +1456,7 @@ const Products = () => {
           ) : null}
         </div>
       </div>
+      <ProductDetail product={currentProduct} />
     </>
   );
 };

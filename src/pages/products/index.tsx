@@ -806,7 +806,7 @@ const Products = () => {
             </div>
             <div className="w-[77.92vw] h-[40.83vw] relative ml-[14.1vw] animate-fade-in-left">
               <Image
-                src="/images/ProductBg3.png"
+                src="/images/_ProductBg3.png"
                 alt="product"
                 fill
                 quality={100}
@@ -861,7 +861,7 @@ const Products = () => {
             </div>
             <div className="w-[46.67vw] h-[37.81vw] relative ml-[12.6vw] animate-fade-in-left">
               <Image
-                src="/images/ProductBg4.png"
+                src="/images/_ProductBg4.png"
                 alt="product"
                 fill
                 quality={100}

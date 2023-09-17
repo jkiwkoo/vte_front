@@ -13,7 +13,7 @@ const Company = () => {
         <div className="pt-[7.8125vw] mb-[8vw] font-gmarketBold text-[40px] flex justify-center">
           {t('company.title')}
         </div>
-        <CompanyBar year="2012">
+        <CompanyBar year="2012" start={true}>
           <AnimatedText isGray noMargin text={t('company.2012.1')} />
           <AnimatedText
             isGray

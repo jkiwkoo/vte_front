@@ -150,7 +150,7 @@ export const Screen = () => {
       <div
         className={`flex justify-start transition-all ${
           currentScreen === 3
-            ? 'w-[62.5vw]'
+            ? 'w-[62.3vw]'
             : 'w-[18.72vw] hover:cursor-pointer'
         } duration-1000`}
         onClick={() => {

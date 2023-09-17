@@ -821,7 +821,7 @@ const Products = () => {
                 pageCatch ? 'transition-all animate-fade-in-down2' : 'hidden'
               } `}
             >
-              <Image src="/images/Product4.png" alt="product" fill />
+              <Image src="/images/_Product4.png" alt="product" fill />
               <div className="mt-[20vw] ml-[1vw] font-apple text-white w-[500px]">
                 <div className="text-[42px]">{t('glass.4.title2')}</div>
                 <div className="mt-[20px] text-[20px]">
